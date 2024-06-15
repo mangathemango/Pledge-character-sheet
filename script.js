@@ -1,5 +1,6 @@
 let pledge_data = null
 let data_loaded = false
+let character = {}
 const proficiencies_box = document.getElementById("proficiency-wrapper")
 const big_proficiencies_box = document.getElementById("big-prof-container")
 const container = document.getElementById("container")
@@ -10,6 +11,7 @@ document.head.appendChild(style);
 fetch("data.json").then(response => {return response.json()}).then(data => {
     pledge_data = data
     proficiency_types = []
+    update_character_stats()
     pledge_data["Work proficiency"].forEach(proficiency => {
         Type = proficiency["Type"]
         if (Type && proficiency_types.includes(Type) != true) {
@@ -60,11 +62,18 @@ const show_category_list = (categoryName) => {
     pledge_data["Work proficiency"].forEach(proficiency => {
         if (proficiency["Type"] === categoryName) {
             categoryListContainer.append(create_proficiency_element(proficiency))
-            proficiencyInput = document.getElementById(put_dash_between_name(proficiency["Proficiency"]))
+            proficiencyID = put_dash_between_name(proficiency["Proficiency"])
+            proficiencyInput = document.getElementById(proficiencyID)
             if (data_loaded === false) {
-                proficiencyInput.value = "0"
-            }
-            updateSliderTrack(proficiencyInput.value,proficiencyInput.id)
+                if (find_stat(proficiency["Proficiency"],character.profession,"Proficiencies")) {
+                    character[proficiencyID] = find_stat(proficiency["Proficiency"],character.profession,"Proficiencies")
+                } else {
+                    character[proficiencyID] = 0
+                }
+                
+            } 
+            proficiencyInput.value = character[proficiencyID]
+            edit_prof(proficiencyInput.id,0)
         }
     })
     
@@ -149,6 +158,7 @@ const updateSliderTrack = (value, id) => {
 
 const edit_prof = (id, value) => {
     document.getElementById(id).value = parseInt(document.getElementById(id).value) + value
+    character[id] = document.getElementById(id).value
     updateSliderTrack(document.getElementById(id).value,id)
 }
 
@@ -222,37 +232,39 @@ const close_list = () => {
     }, listEaseTime);
 }
 
-setInterval(() => {
-    profession = document.getElementById("profession").textContent
-    pledge = document.getElementById("pledge").textContent
-    ancestry = document.getElementById("ancestry").textContent
-    physical_condition = document.getElementById("physical-condition").textContent
-    mental_condition = document.getElementById("mental-condition").textContent
+const update_character_stats = () => {
+    character.profession = document.getElementById("profession").textContent
+    character.pledge = document.getElementById("pledge").textContent
+    character.ancestry = document.getElementById("ancestry").textContent
+    character.physical_condition = document.getElementById("physical-condition").textContent
+    character.mental_condition = document.getElementById("mental-condition").textContent
 
     stats = ["Strength", "Agility", "Intellect", "Will", "Sociability"]
     // Total Stat =  Sanity / 2 + Work prof points / 2 + Ancestry + Physical + Mental + Profession  
     stats.forEach(stat => {
         document.getElementById(stat).textContent = 
-        find_stat(stat,ancestry,"Ancestry") + 
-        find_stat(stat,physical_condition,"Physical Condition") + 
-        find_stat(stat,mental_condition,"Mental Condition") + 
-        find_stat(stat,profession,"Professions")
+        find_stat(stat,character.ancestry,"Ancestry") + 
+        find_stat(stat,character.physical_condition,"Physical Condition") + 
+        find_stat(stat,character.mental_condition,"Mental Condition") + 
+        find_stat(stat,character.profession,"Professions")
     });
 
     skillsCheck = document.getElementById("skills-check")
 
     skillsCheck.innerHTML = `
-        ${ancestry} Skills: <br>
-        ${find_stat("Skill",ancestry,"Ancestry")} <br> 
+        ${character.ancestry} Skills: <br>
+        ${find_stat("Skill", character.ancestry,"Ancestry")} <br> 
         <br>
-        ${profession} Skills and Checks: <br>
-        ${find_stat("Skill", profession, "Professions")} <br> 
+        ${character.profession} Skills and Checks: <br>
+        ${find_stat("Skill", character.profession, "Professions")} <br> 
         <br>
-        ${find_stat("Check", profession, "Professions")} <br> 
+        ${find_stat("Check", character.profession, "Professions")} <br> 
         <br>
-        ${find_stat("Saving Throws", profession, "Professions")}
+        ${find_stat("Saving Throws", character.profession, "Professions")}
     `
-
+}
+setInterval(() => {
+    update_character_stats()
 }, 1000);
 
 
