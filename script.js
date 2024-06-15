@@ -8,7 +8,7 @@ const shadow = document.getElementById("shadow")
 const style = document.createElement('style');
 document.head.appendChild(style);
 
-fetch("data.json").then(response => {return response.json()}).then(data => {
+fetch("data.json").then(response =>{ return response.json() }).then(data => {
     pledge_data = data
     proficiency_types = []
     update_character_stats()
