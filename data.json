@@ -1,28 +1,30 @@
 {
     "Main Interface":[
      {
-      "Strength": 2,
+      "Character Name: ": "Chicken Nugget",
+      "Strength": 5,
       "Agility": 3,
-      "Intellect": 5,
-      "Will": 5,
-      "Sociability": 4,
-      "MP": 18,
+      "Intellect": 3,
+      "Will": 3,
+      "Sociability": 3,
+      "MP": 9,
       "Proficiencies": "Weapons",
       "Column12": 1,
       "Column13": 2,
       "Column14": 3,
       "Column15": 4,
       "Column16": 5,
-      "Skills, Checks, and Saving Throws": "Fairy Skills: <br>• Small Size: When getting attacked, the attacker has to do a comparison of Will rather than Agility.  <br><br>• Fairy Dust: A pollen produced by fairies when inhaled has to compare wills, if the will of the inhaler is lower they are incompacitated. <br> <br>Clerk Skills and Checks: <br>• Measure Twice: A Clerk’s job is to find and cut costs wherever possible while still finding the best deal. A Clerk will be able to reduce 30% of any needed resource to create items or cost to purchase said items rounded up. <br><br>• Clerk Check: Whenever you feel like you and your party’s services are being underpaid or scammed you can do a Clerk Check to pressure the scammer to increase pay or lower price without needing to do a comparison.<br><br>Clerk's Saving Throw(s):<br>• Intellect and Will"
+      "Skills, Checks, and Saving Throws": "Human Skills: <br> Right of Humanity: Whenever in a social situation where you or your party is being disrespected or looked down upon, you can use your Right of Humanity to forcefully make the individual follow your demands. <br><br> Determined: Whenever you are unable to do a Proficiency check due to low stats you can use an attribute score instead. <br> <br>Boatman Skills and Checks: <br> Of the Sea: Working in on seas, rivers, and other bodies of water has taught you many abilities when it comes to being on the water. When on a boat or at sea you gain a BOON to all actions when on water, along with that you know everything relating to creatures of the sea you are knowledgeable about. <br><br> Boatman Check: Whenever an opponent attacks an ally on a body of water you can do an Boatman Check to attempt to block the attack with an item of your choice.<br><br>Boatman's Saving Throw(s):<br> Agility and Will",
+      "Column31": "Days since first started working:"
      },
      {
       "Proficiencies": "Light Weapons",
-      "Column12": 0,
-      "Column13": 0,
-      "Column14": 0,
-      "Column15": 0,
+      "Column12": 1,
+      "Column13": 1,
+      "Column14": 1,
+      "Column15": 1,
       "Column16": 1,
-      "Physical Conditions": "Physical Condition"
+      "Column31": 5
      },
      {
       "Character Name: ": "Pledge Title:",
@@ -31,7 +33,8 @@
       "Column13": 1,
       "Column14": 1,
       "Column15": 1,
-      "Column16": 1
+      "Column16": 1,
+      "Column31": "counting from: 8:33:24PM PHT at June 10, 2024"
      },
      {
       "Proficiencies": "Ranged Weapons",
@@ -40,19 +43,20 @@
       "Column14": 1,
       "Column15": 1,
       "Column16": 1,
-      "Physical Conditions": "Normal"
+      "Column31": "Days since we last saw our family"
      },
      {
-      "Character Name: ": "Follower of The Judged Three",
+      "Character Name: ": "Follower of Nobody",
       "Proficiencies": "Magical Weapons",
       "Column12": 1,
       "Column13": 1,
       "Column14": 1,
       "Column15": 1,
-      "Column16": 1
+      "Column16": 1,
+      "Column31": 1092
      },
      {
-      "Strength": "PLEDGE",
+      "Strength": "Mental Condition ",
       "Proficiencies": "Armor"
      },
      {
@@ -64,6 +68,8 @@
       "Column16": 1
      },
      {
+      "Strength": "Neutral",
+      "Intellect": "Head",
       "Proficiencies": "Heavy Armor",
       "Column12": 1,
       "Column13": 1,
@@ -80,17 +86,21 @@
       "Column16": 1
      },
      {
+      "Intellect": "Normal",
       "Proficiencies": "Work Proficiencies"
      },
      {
       "Proficiencies": "Farming",
-      "Column12": 0,
-      "Column13": 0,
+      "Column12": 1,
+      "Column13": 1,
       "Column14": 1,
       "Column15": 1,
       "Column16": 1
      },
      {
+      "Strength": "Left Arm",
+      "Intellect": "Chest",
+      "Sociability": "Right Arm",
       "Proficiencies": "Mining",
       "Column12": 1,
       "Column13": 1,
@@ -107,6 +117,9 @@
       "Column16": 1
      },
      {
+      "Strength": "Normal",
+      "Intellect": "Normal",
+      "Sociability": "Normal",
       "Proficiencies": "Construction",
       "Column12": 1,
       "Column13": 1,
@@ -123,6 +136,7 @@
       "Column16": 1
      },
      {
+      "Intellect": "Torso",
       "Proficiencies": "Lock Picking",
       "Column12": 1,
       "Column13": 1,
@@ -140,6 +154,7 @@
      },
      {
       "Character Name: ": "Profession",
+      "Intellect": "Normal",
       "Proficiencies": "Walking Spead",
       "Column12": 1,
       "Column13": 1,
@@ -156,7 +171,9 @@
       "Column16": 1
      },
      {
-      "Character Name: ": "Clerk",
+      "Character Name: ": "Boatman",
+      "Agility": "Left Leg",
+      "Will": "Right Leg",
       "Proficiencies": "Cooking",
       "Column12": 1,
       "Column13": 1,
@@ -173,6 +190,8 @@
       "Column16": 1
      },
      {
+      "Agility": "Normal",
+      "Will": "Normal",
       "Proficiencies": "History",
       "Column12": 1,
       "Column13": 1,
@@ -198,6 +217,7 @@
       "Column16": 1
      },
      {
+      "Strength": "Equipment",
       "Proficiencies": "Concentration",
       "Column12": 1,
       "Column13": 1,
@@ -206,7 +226,7 @@
       "Column16": 1
      },
      {
-      "Character Name: ": "Pledge of the Three Witches",
+      "Character Name: ": "Pledgeless",
       "Proficiencies": "Promptness",
       "Column12": 1,
       "Column13": 1,
@@ -215,6 +235,8 @@
       "Column16": 1
      },
      {
+      "Strength": "Gold Pieces:",
+      "Sociability": 0,
       "Proficiencies": "Demeanor",
       "Column12": 1,
       "Column13": 1,
@@ -231,6 +253,8 @@
       "Column16": 1
      },
      {
+      "Strength": "Ethereal Gold:",
+      "Sociability": 0,
       "Proficiencies": "Looks",
       "Column12": 1,
       "Column13": 1,
@@ -248,10 +272,21 @@
       "Column16": 1
      },
      {
+      "Strength": "Item",
+      "Intellect": "Type",
+      "Sociability": "Damage",
+      "Proficiencies": "Luck",
+      "Column12": 1,
+      "Column13": 1,
+      "Column14": 1,
+      "Column15": 1,
+      "Column16": 1
+     },
+     {
+      "Character Name: ": "Human",
       "Proficiencies": "Magical Ability"
      },
      {
-      "Character Name: ": "Fairy",
       "Proficiencies": "Infernal",
       "Column12": 0,
       "Column13": 0,
@@ -276,10 +311,8 @@
       "Column16": 0
      },
      {
-      "Character Name: ": "Mental Condition ",
-      "Strength": "Equipment",
       "Proficiencies": "Metal",
-      "Column12": 1,
+      "Column12": 0,
       "Column13": 0,
       "Column14": 0,
       "Column15": 0,
@@ -287,284 +320,245 @@
      },
      {
       "Proficiencies": "Plague",
-      "Column12": 1,
+      "Column12": 0,
       "Column13": 0,
       "Column14": 0,
       "Column15": 0,
       "Column16": 0
      },
      {
-      "Character Name: ": "Neutral",
-      "Strength": "Gold Pieces:",
-      "Sociability": 0,
       "Proficiencies": "Vitality",
-      "Column12": 1,
-      "Column13": 1,
+      "Column12": 0,
+      "Column13": 0,
       "Column14": 0,
       "Column15": 0,
       "Column16": 0
      },
      {
       "Proficiencies": "Psychic",
-      "Column12": 1,
-      "Column13": 1,
+      "Column12": 0,
+      "Column13": 0,
       "Column14": 0,
       "Column15": 0,
-      "Column16": 0
+      "Column16": 0,
+      "Column23": "Normal"
      },
      {
-      "Strength": "Item",
-      "Intellect": "Type",
-      "Sociability": "Damage",
-      "Proficiencies": "PLEDGE ",
-      "Column12": 1,
-      "Column13": 1,
-      "Column14": 1,
-      "Column15": 1,
-      "Column16": 1,
-      "Physical Conditions": "Normal"
-     },
-     {
-      "Character Name: ": "Head",
       "Proficiencies": "SANITY",
       "Column12": 1,
       "Column13": 1,
       "Column14": 1,
       "Column15": 1,
       "Column16": 1
+     }
+    ],
+    "Conditional Formatting Rules":[
+     {
+      "Color Code": "Less than 1",
+      "Strength": "#980000",
+      "Agility": "#987600",
+      "Intelligence": "#006098",
+      "Will": "#3f0098",
+      "Sociability": "#169800",
+      "MP": "#005498"
      },
      {
-      "Proficiencies": "PROFESSIONS",
-      "Column12": 1,
-      "Column13": 1,
-      "Column14": 1,
-      "Column15": 1,
-      "Column16": 1
+      "Color Code": "Between 0 and 5",
+      "Strength": "#de7b7b",
+      "Agility": "#dabf80",
+      "Intelligence": "#80aeda",
+      "Will": "#9780da",
+      "Sociability": "#80da81",
+      "MP": "#809ada"
      },
      {
-      "Character Name: ": "Normal"
-     },
-     null,
-     {
-      "Character Name: ": "Left Arm"
-     },
-     null,
-     {
-      "Character Name: ": "Normal"
-     },
-     null,
-     {
-      "Character Name: ": "Right Arm"
-     },
-     null,
-     {
-      "Character Name: ": "Normal"
-     },
-     null,
-     {
-      "Character Name: ": "Chest"
-     },
-     null,
-     {
-      "Character Name: ": "Normal"
-     },
-     null,
-     {
-      "Character Name: ": "Torso"
-     },
-     null,
-     {
-      "Character Name: ": "Normal"
-     },
-     null,
-     {
-      "Character Name: ": "Left Leg"
-     },
-     null,
-     {
-      "Character Name: ": "Normal"
-     },
-     null,
-     {
-      "Character Name: ": "Right Leg"
-     },
-     null,
-     {
-      "Character Name: ": "Normal"
+      "Color Code": "Greater than 5",
+      "Strength": "#ff5f5f",
+      "Agility": "#ffc85f",
+      "Intelligence": "#5f80ff",
+      "Will": "#885fff",
+      "Sociability": "#45ea17",
+      "MP": "#5fabff"
      }
     ],
     "Work proficiency":[
      {
       "Proficiency": "Light Weapons",
-      "Type": "Weapons"
+      "Category": "Weapons",
+      "Stat Boost": "N\/A"
      },
      {
       "Proficiency": "Heavy Weapons",
-      "Type": "Weapons"
+      "Category": "Weapons",
+      "Stat Boost": "N\/A"
      },
      {
       "Proficiency": "Ranged Weapons",
-      "Type": "Weapons"
+      "Category": "Weapons",
+      "Stat Boost": "N\/A"
      },
      {
       "Proficiency": "Magical Weapons",
-      "Type": "Weapons"
+      "Category": "Weapons",
+      "Stat Boost": "N\/A"
      },
      {
       "Proficiency": "Light Armor",
-      "Type": "Armor"
+      "Category": "Armor",
+      "Stat Boost": "N\/A"
      },
      {
       "Proficiency": "Heavy Armor",
-      "Type": "Armor"
+      "Category": "Armor",
+      "Stat Boost": "N\/A"
      },
      {
       "Proficiency": "Magical Armor",
-      "Type": "Armor"
+      "Category": "Armor",
+      "Stat Boost": "N\/A"
      },
      {
       "Proficiency": "Farming",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Strength"
      },
      {
       "Proficiency": "Mining",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Strength"
      },
      {
       "Proficiency": "Smithing",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Strength"
      },
      {
       "Proficiency": "Construction",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Strength"
      },
      {
       "Proficiency": "Foraging",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Agility"
      },
      {
       "Proficiency": "Lock Picking",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Agility"
      },
      {
       "Proficiency": "Sneak",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Agility"
      },
      {
       "Proficiency": "Walking Spead",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Agility"
      },
      {
       "Proficiency": "Organization",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Intellect"
      },
      {
       "Proficiency": "Cooking",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Intellect"
      },
      {
       "Proficiency": "First Aid",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Intellect"
      },
      {
       "Proficiency": "History",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Intellect"
      },
      {
       "Proficiency": "Cleaning",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Will"
      },
      {
       "Proficiency": "Emotional Cap",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Will"
      },
      {
       "Proficiency": "Concentration",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Will"
      },
      {
       "Proficiency": "Promptness",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Will"
      },
      {
       "Proficiency": "Demeanor",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Sociability"
      },
      {
       "Proficiency": "Confidence",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Sociability"
      },
      {
       "Proficiency": "Looks",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Sociability"
      },
      {
       "Proficiency": "Speech",
-      "Type": "Work Proficiencies",
+      "Category": "Work Proficiencies",
       "Stat Boost": "Sociability"
      },
      {
+      "Proficiency": "Luck",
+      "Category": "Work Proficiencies",
+      "Stat Boost": "N\/A"
+     },
+     {
       "Proficiency": "Infernal",
-      "Type": "Magic Ability",
+      "Category": "Magic Ability",
       "Stat Boost": "MP"
      },
      {
-      "Proficiency": "Aquatic",
-      "Type": "Magic Ability",
+      "Proficiency": "Aquatic ",
+      "Category": "Magic Ability",
       "Stat Boost": "MP"
      },
      {
       "Proficiency": "Verdent",
-      "Type": "Magic Ability",
+      "Category": "Magic Ability",
       "Stat Boost": "MP"
      },
      {
       "Proficiency": "Metal",
-      "Type": "Magic Ability",
+      "Category": "Magic Ability",
       "Stat Boost": "MP"
      },
      {
       "Proficiency": "Plague",
-      "Type": "Magic Ability",
+      "Category": "Magic Ability",
       "Stat Boost": "MP"
      },
      {
       "Proficiency": "Vitality",
-      "Type": "Magic Ability",
+      "Category": "Magic Ability",
       "Stat Boost": "MP"
      },
      {
       "Proficiency": "Psychic",
-      "Type": "Magic Ability",
+      "Category": "Magic Ability",
       "Stat Boost": "MP"
      },
      {
       "Proficiency": "SANITY"
-     },
-     {
-      "Proficiency": "PROFESSIONS"
-     },
-     {
-      "Proficiency": "PLEDGE"
      }
     ],
     "Professions":[
@@ -699,19 +693,6 @@
       "Saving Throws": "Will"
      },
      {
-      "Professions": "Explosive Handler",
-      "Strength": 0,
-      "Agility": 2,
-      "Intellect": 0,
-      "Will": 0,
-      "Sociability": 0,
-      "MP": 2,
-      "Spell Attack Modifier": "Agility",
-      "Skill": "Explosive Activities: Your work requires explosions and destruction. You have grown in love with the destruction and explosion with your job. When you blow something up you gain the “MANIC” Mental Condition, if you are in combat continue with a BOON of Agility, Strength and Will for the rest of the battle. ",
-      "Check": "Explosive Check: If you ever gain the “MANIC” mental condition you lose a further -2 intelect.",
-      "Saving Throws": "Agility"
-     },
-     {
       "Professions": "Thief",
       "Strength": 0,
       "Agility": 2,
@@ -803,19 +784,6 @@
       "Saving Throws": "Sociability"
      },
      {
-      "Professions": "Fashion Designer",
-      "Strength": 0,
-      "Agility": 0,
-      "Intellect": 2,
-      "Will": 0,
-      "Sociability": 0,
-      "MP": 4,
-      "Spell Attack Modifier": "Intellect",
-      "Skill": "Fashionista: You are an artist of clothes and you will be damned if it isn’t perfect. All the clothes you create will be the best of the best. When an ally or you are wearing clothing you are wearing all enemies will focus on them. ",
-      "Check": "Fashion Check: Whenever you see a piece of clothing that looks old, ugly or that it could be made better you can make a Fashion Check to make it better. ",
-      "Saving Throws": "Intellect"
-     },
-     {
       "Professions": "Chef",
       "Strength": 0,
       "Agility": 0,
@@ -850,7 +818,7 @@
       "Sociability": 0,
       "MP": 4,
       "Spell Attack Modifier": "Intellect",
-      "Skill": "Pharmaceuticals: (TBF)",
+      "Skill": "Pharmaceuticals: As an apothecary your priorities are to find medicinal herbs and other foagables to create medicines which can be used for your patients. You get the ability to make different types of medicines with different type of effects with foragables you or your team finds. talk with your Gamemaster about the certain medicines you can make and what you are able to hold in your equipment section.",
       "Check": "Apothecary Check: Whenever you look for certain medicinal herbs or plants you can use a Apothecary Check to find them. ",
       "Saving Throws": "Intellect"
      },
@@ -860,51 +828,51 @@
       "Agility": 0,
       "Intellect": 0,
       "Will": 0,
-      "Sociability": 0,
+      "Sociability": 2,
       "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
+      "Spell Attack Modifier": "Sociability",
+      "Skill": "Charlatan: You are a person with many lives and even more fake personalities. You lie, cheat and live under the law as a poser and as a cheat. You are able to copy any form of identification, can forge documents ranging from government papers to business documents. ",
+      "Check": "Conman Check: Whenever attempting to cheat or scam someone you can do a conman check. ",
+      "Saving Throws": "Sociability"
      },
      {
       "Professions": "Dungeon Diver",
-      "Strength": 0,
-      "Agility": 0,
+      "Strength": 1,
+      "Agility": 1,
       "Intellect": 0,
       "Will": 0,
       "Sociability": 0,
       "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
+      "Spell Attack Modifier": "Agility",
+      "Skill": "In The Monster's Jaw: You have put your life through constant dangers, fighting through waves and waves of monsters within the treacherous dungeons and being paid a meager wage has made you into a hardened diver. Whenever put into a mental situation where your mental condition may  drop to “Afraid” or “Terrified” you can instead change it into “Mad” or “Pissed Off” instead. ",
+      "Check": "Dungeon Diver Check: Whenever you go through a traumatic event you can do a Dungeon Diver Check. ",
+      "Saving Throws": "Agility"
      },
      {
       "Professions": "Spy",
       "Strength": 0,
-      "Agility": 0,
+      "Agility": 2,
       "Intellect": 0,
       "Will": 0,
       "Sociability": 0,
       "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
+      "Spell Attack Modifier": "Sociability",
+      "Skill": "Echo of The Great Game: You used to be a spy for one of the two great empires of the old era. You lived your way through life by being as inconspicuous as possible. Wherever you go you are unnoticed and unimportant, mixing into the sea of people. Nobody will remember your face unless they specifically focus on it. ",
+      "Check": "Spy Check: Whenever you want to lie about your identity or hide yourself you can make a Spy Check. ",
+      "Saving Throws": "Agility"
      },
      {
       "Professions": "Artisan",
       "Strength": 0,
       "Agility": 0,
-      "Intellect": 0,
+      "Intellect": 2,
       "Will": 0,
       "Sociability": 0,
       "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
+      "Spell Attack Modifier": "Intellect",
+      "Skill": "Artisanal Hands: You are an artist, an individual who makes the world into a more beautiful and colorful place. Your place in the world is defined by making people think something whether it be positive or negative when looking upon your art. Whenever you make an art piece it will always gain a lot of attention and will fetch a high price when placed on the market. ",
+      "Check": "Artisan Check: Whenever you go to create any form of art you can make an Artisan Check. ",
+      "Saving Throws": "Intellect"
      },
      {
       "Professions": "Bard",
@@ -912,64 +880,38 @@
       "Agility": 0,
       "Intellect": 0,
       "Will": 0,
-      "Sociability": 0,
+      "Sociability": 2,
       "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
+      "Spell Attack Modifier": "Sociability",
+      "Skill": "Poetic Inspiration: You are a Bard, you sing of marvelous stories from near to far. These songs range from sad to happy but they all do one thing: Inspire. Whenever you sing a song to one of your allies during combat they get inspired and are able to do a turn immediately after your turn. This Skill can only be used 3 times during combat. ",
+      "Check": "Bard Check: Whenever you sing to someone you can make a Bard Check. ",
+      "Saving Throws": "Sociability"
      },
      {
       "Professions": "Serviceman",
-      "Strength": 0,
+      "Strength": 2,
       "Agility": 0,
       "Intellect": 0,
       "Will": 0,
       "Sociability": 0,
       "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
+      "Spell Attack Modifier": "Strength",
+      "Skill": "Militarist Service: You were a soldier in a grand army, but now you are simply a veteran who is attempting to reach for an old glory. You are trained in many forms of battle and war. When in battle you can use Militarist Service to immediately find a weakness of an enemy without requiring a Comparison or Check. ",
+      "Check": "Serviceman Check: A Serviceman Check can be done when any weapon is used when attempting to attack someone. The Check will add to the original Comparison needed for the ",
+      "Saving Throws": "Strength"
      },
      {
       "Professions": "Officer",
-      "Strength": 0,
+      "Strength": 1,
       "Agility": 0,
       "Intellect": 0,
-      "Will": 0,
+      "Will": 1,
       "Sociability": 0,
       "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
-     },
-     {
-      "Professions": "Dancer",
-      "Strength": 0,
-      "Agility": 0,
-      "Intellect": 0,
-      "Will": 0,
-      "Sociability": 0,
-      "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
-     },
-     {
-      "Professions": "Gladiator",
-      "Strength": 0,
-      "Agility": 0,
-      "Intellect": 0,
-      "Will": 0,
-      "Sociability": 0,
-      "MP": 4,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
+      "Spell Attack Modifier": "Sociability",
+      "Skill": "Keeper of the Peace: You are\/were a police officer meant to keep peace of the city you were apart of. You know how to apprehend and control a suspect. Your mere existence brings fear to criminals or those you deem as such. Whenever chasing or attacking someone they immediately fear your presence and gain the “Afraid” Mental Condition. Only works if the individual is a humanoid creature. ",
+      "Check": "Police Check: Whenever someone is going against your perception of Justice, you can make a Police Check to attempt and apprehend them. ",
+      "Saving Throws": "Strength"
      },
      {
       "Professions": "Priest",
@@ -980,20 +922,7 @@
       "Sociability": 0,
       "MP": 6,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
-     },
-     {
-      "Professions": "Writer",
-      "Strength": 0,
-      "Agility": 0,
-      "Intellect": 0,
-      "Will": 0,
-      "Sociability": 0,
-      "MP": 6,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Pledge Speaker: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1006,20 +935,7 @@
       "Sociability": 0,
       "MP": 6,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
-     },
-     {
-      "Professions": "Cartographer",
-      "Strength": 0,
-      "Agility": 0,
-      "Intellect": 0,
-      "Will": 0,
-      "Sociability": 0,
-      "MP": 6,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Recon: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1032,7 +948,7 @@
       "Sociability": 0,
       "MP": 6,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Risk and Winnings: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1045,7 +961,7 @@
       "Sociability": 0,
       "MP": 6,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Gemstone Manufacturing: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1058,33 +974,7 @@
       "Sociability": 0,
       "MP": 8,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
-     },
-     {
-      "Professions": "Scholar",
-      "Strength": 0,
-      "Agility": 0,
-      "Intellect": 0,
-      "Will": 0,
-      "Sociability": 0,
-      "MP": 8,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
-      "Check": "N\/A",
-      "Saving Throws": "N\/A"
-     },
-     {
-      "Professions": "Archivist",
-      "Strength": 0,
-      "Agility": 0,
-      "Intellect": 0,
-      "Will": 0,
-      "Sociability": 0,
-      "MP": 8,
-      "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Medicinal Expert: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1097,7 +987,7 @@
       "Sociability": 0,
       "MP": 8,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Noblesse Oblige: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1110,7 +1000,7 @@
       "Sociability": 0,
       "MP": 8,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Fiery Orator: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1123,7 +1013,7 @@
       "Sociability": 0,
       "MP": 10,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Mechanical Creation: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1136,7 +1026,7 @@
       "Sociability": 0,
       "MP": 10,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Artifice: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      },
@@ -1149,7 +1039,112 @@
       "Sociability": 0,
       "MP": 10,
       "Spell Attack Modifier": "None",
-      "Skill": "N\/A",
+      "Skill": "Potioneering: TBA",
+      "Check": "N\/A",
+      "Saving Throws": "N\/A"
+     },
+     null,
+     {
+      "Professions": "Explosive Handler",
+      "Strength": 0,
+      "Agility": 2,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "MP": 2,
+      "Spell Attack Modifier": "Agility",
+      "Skill": "Explosive Activities: Your work requires explosions and destruction. You have grown in love with the destruction and explosion with your job. When you blow something up you gain the “MANIC” Mental Condition, if you are in combat continue with a BOON of Agility, Strength and Will for the rest of the battle. ",
+      "Check": "Explosive Check: If you ever gain the “MANIC” mental condition you lose a further -2 intelect.",
+      "Saving Throws": "Agility"
+     },
+     {
+      "Professions": "Fashion Designer",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 2,
+      "Will": 0,
+      "Sociability": 0,
+      "MP": 4,
+      "Spell Attack Modifier": "Intellect",
+      "Skill": "Fashionista: You are an artist of clothes and you will be damned if it isn’t perfect. All the clothes you create will be the best of the best. When an ally or you are wearing clothing you are wearing all enemies will focus on them. ",
+      "Check": "Fashion Check: Whenever you see a piece of clothing that looks old, ugly or that it could be made better you can make a Fashion Check to make it better. ",
+      "Saving Throws": "Intellect"
+     },
+     {
+      "Professions": "Dancer",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "MP": 4,
+      "Spell Attack Modifier": "None",
+      "Skill": "Dancer Extraordinaire: TBA",
+      "Check": "N\/A",
+      "Saving Throws": "N\/A"
+     },
+     {
+      "Professions": "Gladiator",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "MP": 4,
+      "Spell Attack Modifier": "None",
+      "Skill": "Duelist: TBA",
+      "Check": "N\/A",
+      "Saving Throws": "N\/A"
+     },
+     {
+      "Professions": "Writer",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "MP": 6,
+      "Spell Attack Modifier": "None",
+      "Skill": "Conclusion!: TBA",
+      "Check": "N\/A",
+      "Saving Throws": "N\/A"
+     },
+     {
+      "Professions": "Cartographer",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "MP": 6,
+      "Spell Attack Modifier": "None",
+      "Skill": "Mapper: TBA",
+      "Check": "N\/A",
+      "Saving Throws": "N\/A"
+     },
+     {
+      "Professions": "Scholar",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "MP": 8,
+      "Spell Attack Modifier": "None",
+      "Skill": "Educated: TBA",
+      "Check": "N\/A",
+      "Saving Throws": "N\/A"
+     },
+     {
+      "Professions": "Archivist",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "MP": 8,
+      "Spell Attack Modifier": "None",
+      "Skill": "Historian: TBA",
       "Check": "N\/A",
       "Saving Throws": "N\/A"
      }
@@ -1163,7 +1158,7 @@
       "Will": 3,
       "Sociability": 3,
       "MP": 3,
-      "Skill": "• Right of Humanity: Whenever in a social situation where you or your party is being disrespected or looked down upon, you can use your Right of Humanity to forcefully make the individual follow your demands. <br><br>• Determined: Whenever you are unable to do a Proficiency check due to low stats you can use an attribute score instead."
+      "Skill": "Right of Humanity: Whenever in a social situation where you or your party is being disrespected or looked down upon, you can use your Right of Humanity to forcefully make the individual follow your demands. <br><br> Determined: Whenever you are unable to do a Proficiency check due to low stats you can use an attribute score instead."
      },
      {
       "Ancestry": "Goblin",
@@ -1173,7 +1168,7 @@
       "Will": 4,
       "Sociability": 1,
       "MP": 2,
-      "Skill": "• Cunning Escape: When trying to retreat you can do an agility check with a BOON to see if you escape.<br><br>• Sneaky: When checking to sneak you can add agility to the check."
+      "Skill": "Cunning Escape: When trying to retreat you can do an agility check with a BOON to see if you escape.<br><br> Sneaky: When checking to sneak you can add agility to the check."
      },
      {
       "Ancestry": "Fairy",
@@ -1183,7 +1178,7 @@
       "Will": 5,
       "Sociability": 4,
       "MP": 3,
-      "Skill": "• Small Size: When getting attacked, the attacker has to do a comparison of Will rather than Agility.  <br><br>• Fairy Dust: A pollen produced by fairies when inhaled has to compare wills, if the will of the inhaler is lower they are incompacitated."
+      "Skill": "Small Size: When getting attacked, the attacker has to do a comparison of Will rather than Agility.  <br><br> Fairy Dust: A pollen produced by fairies when inhaled has to compare wills, if the will of the inhaler is lower they are incompacitated."
      },
      {
       "Ancestry": "Ork",
@@ -1193,7 +1188,7 @@
       "Will": 3,
       "Sociability": 1,
       "MP": 1,
-      "Skill": "Rising Fury: When you take damage, you can make 1 attack before the opponent ends their turn.<br><br>• Sturdy: You cannot be grappled, stunned or restrained."
+      "Skill": "Rising Fury: When you take damage, you can make 1 attack before the opponent ends their turn.<br><br> Sturdy: You cannot be grappled, stunned or restrained."
      },
      {
       "Ancestry": "Dwarf",
@@ -1203,7 +1198,7 @@
       "Will": 3,
       "Sociability": 3,
       "MP": 2,
-      "Skill": "Shadow Sight: You are able to see in the darkness. <br><br>• Robust Constitutions: You take half damage from poison. You can make challenge comparisons of strength to contest the poison’s effect."
+      "Skill": "Shadow Sight: You are able to see in the darkness. <br><br> Robust Constitutions: You take half damage from poison. You can make challenge comparisons of strength to contest the poison’s effect."
      }
     ],
     "Physical Condition":[
@@ -1216,17 +1211,25 @@
       "Sociability": 0
      },
      {
-      "Physical Condition": "Blinded",
-      "Strength": 0,
-      "Agility": -2,
-      "Intellect": 0,
-      "Will": -3,
-      "Sociability": 0
-     },
-     {
       "Physical Condition": "Lacerated",
       "Strength": -2,
       "Agility": -1,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": -1
+     },
+     {
+      "Physical Condition": "Slashed",
+      "Strength": -1,
+      "Agility": -1,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": -1
+     },
+     {
+      "Physical Condition": "Penetrated",
+      "Strength": -3,
+      "Agility": -3,
       "Intellect": 0,
       "Will": -1,
       "Sociability": -1
@@ -1238,6 +1241,14 @@
       "Intellect": 0,
       "Will": -1,
       "Sociability": -1
+     },
+     {
+      "Physical Condition": "Clobbered",
+      "Strength": -4,
+      "Agility": -4,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0
      },
      {
       "Physical Condition": "Bludgeoned",
@@ -1256,6 +1267,134 @@
       "Sociability": -1
      },
      {
+      "Physical Condition": "Paralyzed",
+      "Strength": -2,
+      "Agility": -2,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": 0
+     },
+     {
+      "Physical Condition": "Blinded",
+      "Strength": 0,
+      "Agility": -2,
+      "Intellect": 0,
+      "Will": -3,
+      "Sociability": 0
+     },
+     {
+      "Physical Condition": "Dazzled",
+      "Strength": 0,
+      "Agility": -1,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": 0
+     },
+     {
+      "Physical Condition": "Scorched",
+      "Strength": -2,
+      "Agility": -1,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": -2
+     },
+     {
+      "Physical Condition": "Burned",
+      "Strength": -1,
+      "Agility": -1,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": -1
+     },
+     {
+      "Physical Condition": "Plagued",
+      "Strength": -3,
+      "Agility": -3,
+      "Intellect": 0,
+      "Will": -2,
+      "Sociability": -3
+     },
+     {
+      "Physical Condition": "Rot",
+      "Strength": -1,
+      "Agility": -1,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": -2
+     },
+     {
+      "Physical Condition": "Hemorrhage",
+      "Strength": -3,
+      "Agility": -2,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": -2
+     },
+     {
+      "Physical Condition": "Bleed",
+      "Strength": -2,
+      "Agility": -1,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": -1
+     },
+     {
+      "Physical Condition": "Frozen",
+      "Strength": -2,
+      "Agility": -4,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": -2
+     },
+     {
+      "Physical Condition": "Chilled",
+      "Strength": -1,
+      "Agility": -2,
+      "Intellect": 0,
+      "Will": -1,
+      "Sociability": -1
+     },
+     {
+      "Physical Condition": "Famished",
+      "Strength": -2,
+      "Agility": -2,
+      "Intellect": -1,
+      "Will": -1,
+      "Sociability": 0
+     },
+     {
+      "Physical Condition": "Starving",
+      "Strength": -1,
+      "Agility": -1,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0
+     },
+     {
+      "Physical Condition": "Parched",
+      "Strength": -2,
+      "Agility": -2,
+      "Intellect": -1,
+      "Will": -1,
+      "Sociability": 0
+     },
+     {
+      "Physical Condition": "Thirsty",
+      "Strength": -1,
+      "Agility": -1,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0
+     },
+     {
+      "Physical Condition": "Missing",
+      "Strength": -3,
+      "Agility": -3,
+      "Intellect": -3,
+      "Will": -3,
+      "Sociability": -3
+     },
+     {
       "Physical Condition": "Incompacitated",
       "Strength": -10,
       "Agility": -10,
@@ -1264,20 +1403,74 @@
       "Sociability": -10
      },
      {
-      "Physical Condition": "Burned",
-      "Strength": -1,
-      "Agility": -1,
-      "Intellect": 0,
-      "Will": -1,
-      "Sociability": -2
-     },
-     {
       "Physical Condition": "Dead",
       "Strength": -999,
       "Agility": -999,
       "Intellect": -999,
       "Will": -999,
       "Sociability": -999
+     }
+    ],
+    "Physical Condition Tiers":[
+     {
+      "Tier 1": "Normal",
+      "Tier 2": "N\/A"
+     },
+     {
+      "Tier 1": "Slashed",
+      "Tier 2": "Lacerated"
+     },
+     {
+      "Tier 1": "Pierced",
+      "Tier 2": "Penetrated"
+     },
+     {
+      "Tier 1": "Bludgeoned",
+      "Tier 2": "Clobbered"
+     },
+     {
+      "Tier 1": "Paralyzed",
+      "Tier 2": "Crippled"
+     },
+     {
+      "Tier 1": "Dazzled",
+      "Tier 2": "Blinded"
+     },
+     {
+      "Tier 1": "Burned",
+      "Tier 2": "Scorched"
+     },
+     {
+      "Tier 1": "Rot",
+      "Tier 2": "Plagued"
+     },
+     {
+      "Tier 1": "Bleed",
+      "Tier 2": "Hemorrhage"
+     },
+     {
+      "Tier 1": "Chilled",
+      "Tier 2": "Frozen"
+     },
+     {
+      "Tier 1": "Starving",
+      "Tier 2": "Famished"
+     },
+     {
+      "Tier 1": "Thirsty",
+      "Tier 2": "Parched"
+     },
+     {
+      "Tier 1": "Missing",
+      "Tier 2": "N\/A"
+     },
+     {
+      "Tier 1": "Incompacitated",
+      "Tier 2": "N\/A"
+     },
+     {
+      "Tier 1": "Dead",
+      "Tier 2": "N\/A"
      }
     ],
     "Mental Condition":[
@@ -1322,7 +1515,7 @@
       "Sociability": 0
      },
      {
-      "Mental Condition": "Pissed Off",
+      "Mental Condition": "Furious",
       "Strength": 2,
       "Agility": 2,
       "Intellect": -2,
@@ -1354,12 +1547,118 @@
       "Sociability": 0
      },
      {
+      "Mental Condition": "Exhausted",
+      "Strength": -2,
+      "Agility": -2,
+      "Intellect": -1,
+      "Will": -1,
+      "Sociability": -1
+     },
+     {
+      "Mental Condition": "Tired",
+      "Strength": -1,
+      "Agility": -1,
+      "Intellect": -1,
+      "Will": -1,
+      "Sociability": 0
+     },
+     {
+      "Mental Condition": "Claivorant",
+      "Strength": 0,
+      "Agility": 2,
+      "Intellect": 0,
+      "Will": 4,
+      "Sociability": 1
+     },
+     {
+      "Mental Condition": "Focused",
+      "Strength": 0,
+      "Agility": 1,
+      "Intellect": 0,
+      "Will": 2,
+      "Sociability": 0
+     },
+     {
+      "Mental Condition": "Lagged",
+      "Strength": 0,
+      "Agility": -3,
+      "Intellect": -1,
+      "Will": 0,
+      "Sociability": 0
+     },
+     {
+      "Mental Condition": "Slow",
+      "Strength": 0,
+      "Agility": -2,
+      "Intellect": -1,
+      "Will": 0,
+      "Sociability": 0
+     },
+     {
+      "Mental Condition": "Serene",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 2,
+      "Will": 2,
+      "Sociability": 1
+     },
+     {
+      "Mental Condition": "Calm",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 1,
+      "Will": 1,
+      "Sociability": 0
+     },
+     {
       "Mental Condition": "Insane",
       "Strength": -999,
       "Agility": -999,
       "Intellect": -999,
       "Will": -999,
       "Sociability": -999
+     }
+    ],
+    "Mental Condition Tiers":[
+     {
+      "Tier 1": "Neutral",
+      "Tier 2": "N\/A"
+     },
+     {
+      "Tier 1": "Happy",
+      "Tier 2": "Manic"
+     },
+     {
+      "Tier 1": "Sad",
+      "Tier 2": "Depressed"
+     },
+     {
+      "Tier 1": "Mad",
+      "Tier 2": "Furious"
+     },
+     {
+      "Tier 1": "Afraid",
+      "Tier 2": "Terrified"
+     },
+     {
+      "Tier 1": "Tired",
+      "Tier 2": "Exhausted"
+     },
+     {
+      "Tier 1": "Focused",
+      "Tier 2": "Claivorant"
+     },
+     {
+      "Tier 1": "Slow",
+      "Tier 2": "Lagged"
+     },
+     {
+      "Tier 1": "Calm",
+      "Tier 2": "Serene"
+     },
+     {
+      "Tier 1": "Insane",
+      "Tier 2": "N\/A"
      }
     ],
     "Pledge":[
@@ -1425,7 +1724,7 @@
      },
      {
       "Pledge": "Pledge of Sloth",
-      "Pledge Title": "the Lazy Fucks"
+      "Pledge Title": "The Lazy Fucks"
      },
      {
       "Pledge": "Pledge of War",
@@ -1525,7 +1824,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Boatman",
@@ -1555,7 +1855,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Clerk",
@@ -1585,7 +1886,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Logger",
@@ -1615,7 +1917,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Farmhand",
@@ -1645,7 +1948,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Blacksmtih",
@@ -1675,7 +1979,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Miner",
@@ -1705,7 +2010,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Forager",
@@ -1735,7 +2041,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Graveyard Worker",
@@ -1765,7 +2072,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Chimney Cleaner",
@@ -1795,7 +2103,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Explosive Handler",
@@ -1825,7 +2134,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Thief",
@@ -1855,7 +2165,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Executioner",
@@ -1885,7 +2196,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Beggar",
@@ -1915,7 +2227,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 2
+      "Speech": 2,
+      "Luck": 0
      },
      {
       "Proficiencies": "Flag Bearer",
@@ -1945,7 +2258,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 2
+      "Speech": 2,
+      "Luck": 0
      },
      {
       "Proficiencies": "Bountyhunter",
@@ -1975,7 +2289,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 2
+      "Speech": 2,
+      "Luck": 0
      },
      {
       "Proficiencies": "Puppeteer",
@@ -2005,7 +2320,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Merchant",
@@ -2035,7 +2351,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Fashion Designer",
@@ -2065,7 +2382,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Chef",
@@ -2095,7 +2413,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Courier",
@@ -2125,7 +2444,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Apothecary",
@@ -2140,22 +2460,23 @@
       "Mining": 0,
       "Smithing": 0,
       "Construction": 0,
-      "Foraging": 1,
+      "Foraging": 2,
       "Lock Picking": 0,
       "Sneak": 0,
-      "Walking Spead": 0,
+      "Walking Spead": 1,
       "Organization": 1,
       "Cooking": 0,
-      "First Aid": 0,
+      "First Aid": 2,
       "History": 0,
       "Cleaning": 0,
       "Emotional Cap": 0,
       "Concentration": 0,
-      "Promptness": 0,
+      "Promptness": 1,
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Conman",
@@ -2172,8 +2493,8 @@
       "Construction": 0,
       "Foraging": 0,
       "Lock Picking": 0,
-      "Sneak": 0,
-      "Walking Spead": 0,
+      "Sneak": 2,
+      "Walking Spead": 2,
       "Organization": 0,
       "Cooking": 0,
       "First Aid": 0,
@@ -2182,18 +2503,19 @@
       "Emotional Cap": 0,
       "Concentration": 0,
       "Promptness": 0,
-      "Demeanor": 0,
-      "Confidence": 0,
+      "Demeanor": 1,
+      "Confidence": 2,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 2,
+      "Luck": 0
      },
      {
       "Proficiencies": "Dungeon Diver",
-      "Light Weapons": 0,
+      "Light Weapons": 2,
       "Heavy Weapons": 0,
       "Ranged Weapons": 0,
       "Magical Weapons": 0,
-      "Light Armor": 0,
+      "Light Armor": 1,
       "Heavy Armor": 0,
       "Magical Armor": 0,
       "Farming": 0,
@@ -2202,28 +2524,29 @@
       "Construction": 0,
       "Foraging": 0,
       "Lock Picking": 0,
-      "Sneak": 0,
-      "Walking Spead": 0,
+      "Sneak": 2,
+      "Walking Spead": 4,
       "Organization": 0,
       "Cooking": 0,
       "First Aid": 0,
       "History": 0,
       "Cleaning": 0,
-      "Emotional Cap": 0,
-      "Concentration": 0,
-      "Promptness": 0,
+      "Emotional Cap": 2,
+      "Concentration": 1,
+      "Promptness": 2,
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Spy",
-      "Light Weapons": 0,
+      "Light Weapons": 1,
       "Heavy Weapons": 0,
       "Ranged Weapons": 0,
       "Magical Weapons": 0,
-      "Light Armor": 0,
+      "Light Armor": 2,
       "Heavy Armor": 0,
       "Magical Armor": 0,
       "Farming": 0,
@@ -2231,21 +2554,22 @@
       "Smithing": 0,
       "Construction": 0,
       "Foraging": 0,
-      "Lock Picking": 0,
-      "Sneak": 0,
+      "Lock Picking": 2,
+      "Sneak": 3,
       "Walking Spead": 0,
       "Organization": 0,
       "Cooking": 0,
       "First Aid": 0,
-      "History": 0,
+      "History": 2,
       "Cleaning": 0,
       "Emotional Cap": 0,
-      "Concentration": 0,
-      "Promptness": 0,
+      "Concentration": 1,
+      "Promptness": 1,
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Artisan",
@@ -2259,23 +2583,24 @@
       "Farming": 0,
       "Mining": 0,
       "Smithing": 0,
-      "Construction": 0,
+      "Construction": 2,
       "Foraging": 0,
       "Lock Picking": 0,
       "Sneak": 0,
       "Walking Spead": 0,
-      "Organization": 0,
+      "Organization": 2,
       "Cooking": 0,
       "First Aid": 0,
       "History": 0,
       "Cleaning": 0,
       "Emotional Cap": 0,
-      "Concentration": 0,
-      "Promptness": 0,
+      "Concentration": 2,
+      "Promptness": 1,
       "Demeanor": 0,
-      "Confidence": 0,
+      "Confidence": 1,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Bard",
@@ -2297,24 +2622,25 @@
       "Organization": 0,
       "Cooking": 0,
       "First Aid": 0,
-      "History": 0,
+      "History": 2,
       "Cleaning": 0,
       "Emotional Cap": 0,
       "Concentration": 0,
       "Promptness": 0,
-      "Demeanor": 0,
-      "Confidence": 0,
-      "Looks": 0,
-      "Speech": 0
+      "Demeanor": 2,
+      "Confidence": 1,
+      "Looks": 1,
+      "Speech": 2,
+      "Luck": 0
      },
      {
       "Proficiencies": "Serviceman",
-      "Light Weapons": 0,
-      "Heavy Weapons": 0,
-      "Ranged Weapons": 0,
+      "Light Weapons": 2,
+      "Heavy Weapons": 2,
+      "Ranged Weapons": 2,
       "Magical Weapons": 0,
-      "Light Armor": 0,
-      "Heavy Armor": 0,
+      "Light Armor": 2,
+      "Heavy Armor": 2,
       "Magical Armor": 0,
       "Farming": 0,
       "Mining": 0,
@@ -2323,25 +2649,26 @@
       "Foraging": 0,
       "Lock Picking": 0,
       "Sneak": 0,
-      "Walking Spead": 0,
+      "Walking Spead": 2,
       "Organization": 0,
       "Cooking": 0,
       "First Aid": 0,
-      "History": 0,
+      "History": 2,
       "Cleaning": 0,
-      "Emotional Cap": 0,
+      "Emotional Cap": 2,
       "Concentration": 0,
       "Promptness": 0,
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Officer",
-      "Light Weapons": 0,
+      "Light Weapons": 1,
       "Heavy Weapons": 0,
-      "Ranged Weapons": 0,
+      "Ranged Weapons": 1,
       "Magical Weapons": 0,
       "Light Armor": 0,
       "Heavy Armor": 0,
@@ -2353,19 +2680,20 @@
       "Foraging": 0,
       "Lock Picking": 0,
       "Sneak": 0,
-      "Walking Spead": 0,
+      "Walking Spead": 2,
       "Organization": 0,
       "Cooking": 0,
-      "First Aid": 0,
+      "First Aid": 1,
       "History": 0,
       "Cleaning": 0,
-      "Emotional Cap": 0,
+      "Emotional Cap": 2,
       "Concentration": 0,
-      "Promptness": 0,
+      "Promptness": 2,
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 2,
+      "Luck": 0
      },
      {
       "Proficiencies": "Dancer",
@@ -2395,7 +2723,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Gladiator",
@@ -2425,7 +2754,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Priest",
@@ -2455,7 +2785,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Writer",
@@ -2485,7 +2816,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Scout",
@@ -2515,7 +2847,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Cartographer",
@@ -2545,7 +2878,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Gambler",
@@ -2575,7 +2909,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Jeweler",
@@ -2605,7 +2940,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Doctor",
@@ -2635,7 +2971,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Scholar",
@@ -2665,7 +3002,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Archivist",
@@ -2695,7 +3033,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Noble",
@@ -2725,7 +3064,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Politician",
@@ -2755,7 +3095,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Machinist",
@@ -2785,7 +3126,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Artificer",
@@ -2815,7 +3157,8 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      {
       "Proficiencies": "Potion Maker",
@@ -2845,16 +3188,17 @@
       "Demeanor": 0,
       "Confidence": 0,
       "Looks": 0,
-      "Speech": 0
+      "Speech": 0,
+      "Luck": 0
      },
      null,
      null,
      null,
      {
       "Proficiencies": "Light Weapons",
-      "Light Weapons": 0,
-      "Ranged Weapons": 1,
-      "Magical Weapons": 1,
+      "Light Weapons": 2,
+      "Ranged Weapons": 0,
+      "Magical Weapons": 0,
       "Light Armor": 1,
       "Heavy Armor": 1,
       "Magical Armor": 1
@@ -2889,9 +3233,9 @@
      null,
      {
       "Proficiencies": "Light Armor",
-      "Light Weapons": 1,
+      "Light Weapons": 2,
       "Ranged Weapons": 0,
-      "Magical Weapons": 1,
+      "Magical Weapons": 0,
       "Light Armor": 1,
       "Heavy Armor": 1,
       "Magical Armor": 1
@@ -2989,11 +3333,11 @@
      },
      {
       "Proficiencies": "Organization",
-      "Light Weapons": 4,
+      "Light Weapons": 2,
       "Ranged Weapons": 0,
       "Magical Weapons": 0,
-      "Light Armor": 0,
-      "Heavy Armor": 0,
+      "Light Armor": 1,
+      "Heavy Armor": 1,
       "Magical Armor": 1
      },
      {
@@ -3033,7 +3377,7 @@
       "Magical Armor": 1
      },
      {
-      "Proficiencies": "Emotional Cap",
+      "Proficiencies": "Emotional Cap.",
       "Light Weapons": 0,
       "Ranged Weapons": 1,
       "Magical Weapons": 1,
@@ -3094,86 +3438,137 @@
       "Light Armor": 1,
       "Heavy Armor": 1,
       "Magical Armor": 1
+     },
+     {
+      "Proficiencies": "Luck",
+      "Light Weapons": 0,
+      "Ranged Weapons": 1,
+      "Magical Weapons": 1,
+      "Light Armor": 1,
+      "Heavy Armor": 1,
+      "Magical Armor": 1
      }
     ],
     "Stats Calculation":[
      {
       "Column1": "Ancestry",
-      "Strength": 1,
+      "Strength": 3,
       "Agility": 3,
       "Intellect": 3,
-      "Will": 5,
-      "Sociability": 4,
+      "Will": 3,
+      "Sociability": 3,
       "None": 0,
-      "Column9": "Ancestry",
+      "Physical Condition Parts": "Head",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "Column16": "Ancestry",
       "MP": 3,
-      "Column11": "Magic Proficiency Total"
+      "Column18": "Magic Proficiency Total"
      },
      {
       "Column1": "Work Proficiency",
-      "Strength": 2,
+      "Strength": 3,
       "Agility": 3,
       "Intellect": 3,
-      "Will": 5,
-      "Sociability": 4,
+      "Will": 3,
+      "Sociability": 3,
       "None": 0,
-      "Column9": "Profession",
-      "MP": 8,
-      "Column11": 6
+      "Physical Condition Parts": "Left Arm",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "Column16": "Profession",
+      "MP": 6,
+      "Column18": 0
      },
      {
       "Column1": "Profession",
-      "Strength": 2,
+      "Strength": 5,
       "Agility": 3,
-      "Intellect": 5,
-      "Will": 5,
-      "Sociability": 4,
+      "Intellect": 3,
+      "Will": 3,
+      "Sociability": 3,
       "None": 0,
-      "Column9": "MP Added",
-      "MP": 14
+      "Physical Condition Parts": "Right Arm",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "Column16": "MP Added",
+      "MP": 6
      },
      {
       "Column1": "Physical",
-      "Strength": 2,
+      "Strength": 5,
       "Agility": 3,
-      "Intellect": 5,
-      "Will": 5,
-      "Sociability": 4,
+      "Intellect": 3,
+      "Will": 3,
+      "Sociability": 3,
       "None": 0,
-      "Column9": "Will",
-      "MP": 16.5
+      "Physical Condition Parts": "Chest",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "Column16": "Will",
+      "MP": 7.5
      },
      {
       "Column1": "Mental",
-      "Strength": 2,
+      "Strength": 5,
       "Agility": 3,
-      "Intellect": 5,
-      "Will": 5,
-      "Sociability": 4,
+      "Intellect": 3,
+      "Will": 3,
+      "Sociability": 3,
       "None": 0,
-      "Column9": "Round Down",
-      "MP": 16
+      "Physical Condition Parts": "Torso",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "Column16": "Round Down",
+      "MP": 7
      },
      {
       "Column1": "Sanity",
-      "Strength": 2,
+      "Strength": 5,
       "Agility": 3,
-      "Intellect": 5,
-      "Will": 5,
-      "Sociability": 4,
+      "Intellect": 3,
+      "Will": 3,
+      "Sociability": 3,
       "None": 0,
-      "Column9": "PMP",
-      "MP": 18
+      "Physical Condition Parts": "Left Leg",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0,
+      "Column16": "PMP",
+      "MP": 9
      },
-     null,
      {
-      "Strength": "Mango's Note"
+      "Physical Condition Parts": "Right Leg",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0
      },
      {
-      "Strength": "Total Stat = Ancestry +  Profession + Physical + Mental + Sanity \/ 2 + Work prof points \/ 2"
-     },
-     {
-      "Strength": "Total MP = Ancestry + Profession + Profession Spell Attack Modifier + Magic Proficiency + Will \/ 2 "
+      "Physical Condition Parts": "Sum",
+      "Strength": 0,
+      "Agility": 0,
+      "Intellect": 0,
+      "Will": 0,
+      "Sociability": 0
      }
     ]
     }

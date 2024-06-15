@@ -13,7 +13,7 @@ fetch("data.json").then(response => {return response.json()}).then(data => {
     proficiency_types = []
     update_character_stats()
     pledge_data["Work proficiency"].forEach(proficiency => {
-        Type = proficiency["Type"]
+        Type = proficiency["Category"]
         if (Type && proficiency_types.includes(Type) != true) {
             proficiency_types.push(Type)
             proficiencies_box.append(create_category_element(Type))
@@ -23,10 +23,12 @@ fetch("data.json").then(response => {return response.json()}).then(data => {
             big_prof = create_proficiency_element(proficiency)
             big_prof.classList.add("big_prof")
             big_proficiencies_box.append(big_prof)
+            updateSliderTrack(5,proficiency["Proficiency"])
         }
     })
     update_character_stats()
     data_loaded = true
+
 })
 
 const create_category_element = (categoryName) => {
@@ -61,7 +63,7 @@ const show_category_list = (categoryName) => {
     document.getElementById(put_dash_between_name(categoryName + "-container")).after(categoryListContainer)
 
     pledge_data["Work proficiency"].forEach(proficiency => {
-        if (proficiency["Type"] === categoryName) {
+        if (proficiency["Category"] === categoryName) {
             categoryListContainer.append(create_proficiency_element(proficiency))
             proficiencyID = put_dash_between_name(proficiency["Proficiency"])
             proficiencyName = proficiency["Proficiency"]
@@ -101,6 +103,7 @@ const create_proficiency_element = (proficiency) => {
     proficiencyInput.type = "range";
     proficiencyInput.min = "0";
     proficiencyInput.max = "5";
+    proficiencyInput.value - "5"
     proficiencyInput.disabled = true;
     proficiencyInput.id = put_dash_between_name(proficiencyName);
     proficiencyInput.className = "proficiency-input";
@@ -160,7 +163,7 @@ const updateSliderTrack = (value, id) => {
 
 const edit_prof = (id, value) => {
     document.getElementById(id).value = parseInt(document.getElementById(id).value) + value
-    character[id] = document.getElementById(id).value
+    character[id.replace("-", " ")] = document.getElementById(id).value
     updateSliderTrack(document.getElementById(id).value,id)
     update_character_stats()
 }
@@ -241,23 +244,51 @@ const update_character_stats = () => {
     character.ancestry = document.getElementById("ancestry").textContent
     character.physical_condition = document.getElementById("physical-condition").textContent
     character.mental_condition = document.getElementById("mental-condition").textContent
+    try {
+    character.sanity = document.getElementById("SANITY").value
+    } catch (TypeError) {
+        character.sanity = "0"
+    } 
 
-    stats = ["Strength", "Agility", "Intellect", "Will", "Sociability"]
-    // Total Stat =  Sanity / 2 + Work prof points / 2 + Ancestry + Physical + Mental + Profession  
+    stats = ["Strength", "Agility", "Intellect", "Will", "Sociability", "MP"]
+    
+     
     stats.forEach(stat => {
         proficiencyBoost = 0
         pledge_data["Work proficiency"].filter(element => element["Stat Boost"] === stat).forEach(proficiency => {
             proficiencyBoost += parseInt(character[proficiency["Proficiency"]])
         })
 
-        document.getElementById(stat).textContent = 
-        find_stat(stat,character.ancestry,"Ancestry") + 
-        find_stat(stat,character.physical_condition,"Physical Condition") + 
-        find_stat(stat,character.mental_condition,"Mental Condition") + 
-        find_stat(stat,character.profession,"Professions") + 
-        (proficiencyBoost/2)
+        if (stat === "MP") {
+            spellAttackModifier = 0 
+            if (find_stat("Spell Attack Modifier",character.profession,"Professions") != "None") {
+                spellAttackModifier = character[find_stat("Spell Attack Modifier",character.profession,"Professions")]
+            }
+            // Total MP = Ancestry + Profession + Profession Spell Attack Modifier + Magic Proficiency + Will / 2
+            character[stat] = Math.floor(
+            find_stat("MP",character.ancestry,"Ancestry") + 
+            find_stat("MP",character.profession,"Professions") + 
+            spellAttackModifier + 
+            proficiencyBoost +
+            character["Will"]/2
+            )
+        } else {
+            // Normal Stat =  Sanity / 2 + Work prof points / 2 + Ancestry + Physical + Mental + Profession  
+            character[stat] = 
+            (character["sanity"] - 5) +
+            (proficiencyBoost/2) +
+            find_stat(stat,character.ancestry,"Ancestry") + 
+            find_stat(stat,character.physical_condition,"Physical Condition") + 
+            find_stat(stat,character.mental_condition,"Mental Condition") + 
+            find_stat(stat,character.profession,"Professions") 
+        }
+        
 
+        document.getElementById(stat).textContent = character[stat]
     });
+
+
+    
 
     skillsCheck = document.getElementById("skills-check")
 

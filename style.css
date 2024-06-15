@@ -228,7 +228,7 @@
 
 #proficiency-wrapper {
     padding: 5px;
-    height: calc(100vh - 170px);
+    height: calc(100vh - 70px);
     overflow: scroll;
     display: flex;
     flex-direction: column;
@@ -420,7 +420,7 @@
 #proficiencies-container {
     height: 100%;
     display: grid;
-    grid-template-rows: 30px calc(100% - 150px) 120px;
+    grid-template-rows: 30px calc(100vh - 70px) 40px;
 }
 #skills-check-container {
     border-left: black 5px solid;
