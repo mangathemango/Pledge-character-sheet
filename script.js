@@ -25,6 +25,7 @@ fetch("data.json").then(response => {return response.json()}).then(data => {
             big_proficiencies_box.append(big_prof)
         }
     })
+    update_character_stats()
     data_loaded = true
 })
 
@@ -63,16 +64,17 @@ const show_category_list = (categoryName) => {
         if (proficiency["Type"] === categoryName) {
             categoryListContainer.append(create_proficiency_element(proficiency))
             proficiencyID = put_dash_between_name(proficiency["Proficiency"])
+            proficiencyName = proficiency["Proficiency"]
             proficiencyInput = document.getElementById(proficiencyID)
             if (data_loaded === false) {
                 if (find_stat(proficiency["Proficiency"],character.profession,"Proficiencies")) {
-                    character[proficiencyID] = find_stat(proficiency["Proficiency"],character.profession,"Proficiencies")
+                    character[proficiencyName] = find_stat(proficiency["Proficiency"],character.profession,"Proficiencies")
                 } else {
-                    character[proficiencyID] = 0
+                    character[proficiencyName] = 0
                 }
                 
             } 
-            proficiencyInput.value = character[proficiencyID]
+            proficiencyInput.value = character[proficiencyName]
             edit_prof(proficiencyInput.id,0)
         }
     })
@@ -160,6 +162,7 @@ const edit_prof = (id, value) => {
     document.getElementById(id).value = parseInt(document.getElementById(id).value) + value
     character[id] = document.getElementById(id).value
     updateSliderTrack(document.getElementById(id).value,id)
+    update_character_stats()
 }
 
 const find_stat = (stat, type, category) => {
@@ -242,11 +245,18 @@ const update_character_stats = () => {
     stats = ["Strength", "Agility", "Intellect", "Will", "Sociability"]
     // Total Stat =  Sanity / 2 + Work prof points / 2 + Ancestry + Physical + Mental + Profession  
     stats.forEach(stat => {
+        proficiencyBoost = 0
+        pledge_data["Work proficiency"].filter(element => element["Stat Boost"] === stat).forEach(proficiency => {
+            proficiencyBoost += parseInt(character[proficiency["Proficiency"]])
+        })
+
         document.getElementById(stat).textContent = 
         find_stat(stat,character.ancestry,"Ancestry") + 
         find_stat(stat,character.physical_condition,"Physical Condition") + 
         find_stat(stat,character.mental_condition,"Mental Condition") + 
-        find_stat(stat,character.profession,"Professions")
+        find_stat(stat,character.profession,"Professions") + 
+        (proficiencyBoost/2)
+
     });
 
     skillsCheck = document.getElementById("skills-check")
@@ -260,12 +270,9 @@ const update_character_stats = () => {
         <br>
         ${find_stat("Check", character.profession, "Professions")} <br> 
         <br>
-        ${find_stat("Saving Throws", character.profession, "Professions")}
+        Saving Throws: ${find_stat("Saving Throws", character.profession, "Professions")}
     `
 }
-setInterval(() => {
-    update_character_stats()
-}, 1000);
 
 
 
