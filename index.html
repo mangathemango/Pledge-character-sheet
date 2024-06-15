@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c418327c57.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="info-container">
+            <div id="char-name-container">
+                <p id="char-name-label" class="info-label">Character Name:</p>
+                <input id="character-name" type="text" class="character-input" placeholder="Enter name">
+            </div> 
+            <div id="pledge-title-container">
+                <p id="pledge-title-label" class="info-label">Pledge Title:</p>
+            </div>
+            <div id="profession-container">
+                <p id="profession-label" class="info-label">Profession</p>
+                <p id="profession" class="character-input" onclick="javascript:show_list('Professions')">Professionless</p>
+            </div>
+            <div id="pledge-container">
+                <p id="pledge-label" class="info-label">Pledge</p>
+                <p id="pledge" class="character-input" onclick="javascript:show_list('Pledge')">Pledgeless</p>
+            </div>
+            <div id="ancestry-container">
+                <p id="ancestry-label" class="info-label">Ancestry</p>
+                <p id="ancestry" class="character-input" onclick="javascript:show_list('Ancestry')">Human</p>
+            </div>
+            <div id="physical-condition-container">
+                <p id="physical-condition-label" class="info-label">Physical Condition</p>
+                <p id="physical-condition" class="character-input" onclick="javascript:show_list('Physical Condition')">Dead</p>
+            </div>
+            <div id="mental-condition-container">
+                <p id="mental-condition-label" class="info-label">Mental Condition</p>
+                <p id="mental-condition" class="character-input" onclick="javascript:show_list('Mental Condition')">Neutral</p>
+            </div>
+        </div>
+        <div id="stats-container">
+            <div id="basic-stats-container">
+                <div class="stat-container">
+                    <p class="stat-label">Strength</p>
+                    <p class="stat" id="Strength">0</p>
+                </div>
+                <div class="stat-container">
+                    <p class="stat-label">Agility</p>
+                    <p class="stat" id="Agility">0</p>
+                </div>
+                <div class="stat-container">
+                    <p class="stat-label">Intellect</p>
+                    <p class="stat" id="Intellect">0</p>
+                </div>
+                <div class="stat-container">
+                    <p class="stat-label">Will</p>
+                    <p class="stat" id="Will">0</p>
+                </div>
+                <div class="stat-container">
+                    <p class="stat-label">Sociability</p>
+                    <p class="stat" id="Sociability">0</p>
+                </div>
+                <div class="stat-container">
+                    <p class="stat-label">MP</p>
+                    <p class="stat" id="MP">0</p>
+                </div>
+            </div>
+            <div id="pledge-box-container">
+                <p id="pledge-box-label">PLEDGE</p>
+                <div id="pledge-box"></div>
+            </div>
+            <div id="equipment-box-container">
+                <p id="equipment-label">Equipment</p>
+                <p id="gold-pieces-label">Gold Pieces:</p>
+                <p id="gold-pieces">0</p>
+                <p id="item-label" class="equipment-label">Item</p>
+                <p id="type-label" class="equipment-label">Type</p>
+                <p id="damage-label" class="equipment-label">Damage</p>
+                <input type="text" class="equipment"><input type="text" class="equipment"><input type="text" class="equipment">
+                <input type="text" class="equipment"><input type="text" class="equipment"><input type="text" class="equipment">
+                <input type="text" class="equipment"><input type="text" class="equipment"><input type="text" class="equipment">
+            </div>
+        </div>
+        <div id="proficiencies-container">
+            <p id="proficiencies-label">Proficiencies</p>
+            <div id="proficiency-wrapper">
+
+            </div>
+            <div id="big-prof-container"></div>
+        </div>
+        <div id="skills-check-container">
+            <p id="skills-check-label">Skills, Checks, and Saving Throws</p>
+            <p id="skills-check">
+
+            </p>
+        </div>
+        <div id="shadow"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+@keyframes ease-down {
+    from {
+        transform: translateY(-150%);
+    } to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ease-up {
+    from {
+        transform: translateY(0px);
+    } to {
+        transform: translateY(-150%);
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "EB Garamond", serif;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 10% 30% 35% 25%;
+    height: 100vh;
+    position: relative;
+}
+
+#info-container {
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#stats-container {
+    display: flex;
+    flex-direction: column;
+    border-left: black 5px solid;
+    border-right: black 5px solid;
+    height: 100%;
+}
+
+#basic-stats-container {
+    display: flex;
+    flex-direction: row;
+    grid-template-rows: 100%;
+    width: 100%;
+    margin-left: 2px;
+}
+
+.stat-container {
+    width: 16.6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+}
+
+.stat-label {
+    width: calc(100% - 2px);
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black 3px solid;
+    font-size: 12px;
+    background-color: gray;
+    color: white;
+    overflow: hidden;
+    z-index: -1;
+    border-right: black 4px solid;
+}
+
+.stat {
+    width: calc(100% - 2px);
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black 3px solid;
+    font-size: 25px;
+    border-bottom: black 10px solid;
+    margin-left: 1px;
+}
+
+
+
+.info-label {
+    height: 50%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+#pledge-title-label {
+    height: 25%;
+}
+
+.character-input {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    transition: all ease 0.3s;
+    border: none;
+}
+
+.character-input:hover {
+    background-color: black;
+    color: white;
+}
+
+#list-container {
+    z-index: 2;
+    background-color: white;
+    border: black 5px solid;
+    position: absolute;
+    height: 70%;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+    overflow: scroll;
+}
+
+#shadow {
+    z-index: -1;
+    background-color: black;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#list-label {
+    text-align: center;
+    font-size: 30px;
+}
+#pledge-box-container {
+    aspect-ratio: 1/1;
+    border-bottom: black 5px solid;
+}
+
+#pledge-box-label {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    height: 50px;
+    overflow: hidden;
+    text-wrap: stable ;
+}
+
+#pledge-box {
+    height: 85%;
+    background-color: lightgray;
+}
+
+#equipment-box-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,33.3%);
+    grid-template-rows: repeat(9,11.1%);
+    height: 40%;
+}
+#equipment-label {
+    width: 100%;
+    grid-column: span 3;
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    background-color: gray;
+}
+#gold-pieces-label {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(255, 255, 170);
+}
+
+.equipment-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: gray 1px solid;
+}
+#gold-pieces {
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: lightgray;
+}
+
+.equipment {
+    text-align: center;
+}
+
+#proficiencies-label {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#proficiency-wrapper {
+    padding: 5px;
+    height: calc(100vh - 160px);
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.proficiency-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 20px;
+    margin: 2px 0px;
+}
+
+.proficiency-title {
+    width: 20%;
+    text-wrap: nowrap;
+    margin: 0px 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.proficiency-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+}
+
+/* Customizing the thumb/handle */
+.proficiency-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.proficiency-input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: lime;
+    cursor: pointer;
+}
+
+.proficiency-input::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: lime;
+    cursor: pointer;
+}
+
+/* Customizing the track */
+.proficiency-input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right, lime 0%,  red 0%);
+    border-radius: 10px;
+    border: none;
+}
+
+
+.edit-prof-container {
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.add-prof-button, .remove-prof-button {
+    width: 30%;
+    height: 100%;
+    aspect-ratio: 3/1;
+    transition: all ease 0.3s;
+    font-size: 10px;
+}
+
+.add-prof-button:hover, .remove-prof-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.add-prof-button {
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.remove-prof-button {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.prof-display {
+    width: 33%;
+    height: 90%;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    border: black 1px solid;
+    font-size: 12px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.category {
+    width: 99%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    border: black 1px solid;
+    border-radius: 4px;
+    overflow-wrap: normal;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+}
+.category-label {
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.Weapons {
+    background-color: rgb(255, 127, 127);
+}
+
+.Armor {
+    background-color: lightgray;
+}
+
+.Work-Proficiencies {
+    background-color: rgb(255, 255, 158);
+}
+
+.Magic-Ability {
+    background-color: lightgreen;
+}
+
+#SANITY-container {
+    background-color: lightblue;
+}
+
+#PROFESSIONS-container {
+    background-color: rgb(224, 189, 224);
+}
+
+#PLEDGE-container {
+    background-color: rgb(255, 157, 157);
+}
+
+.big_prof {
+    height: 40px;
+    display: flex;
+}
+
+#big-prof-container {
+    position: relative;
+}
+
+#proficiencies-container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 30px calc(100% - 150px) 120px;
+}
+#skills-check-container {
+    border-left: black 5px solid;
+    border-right: black 5px solid;
+}
+#skills-check-label {
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#skills-check {
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.category-list-container {
+    width: 97%;
+    justify-self: center;
+    align-self: center;
+    border: black 1px solid;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 5px 0px;
+}
