@@ -56,7 +56,6 @@ const show_category_list = (categoryName) => {
         return
     }
     categoryListContainer = document.createElement("div")
-    categoryListContainer.classList.add(put_dash_between_name(categoryName))
     categoryListContainer.classList.add("category-list-container")
     categoryListContainer.id = put_dash_between_name(categoryName) + "-list-container"
 
@@ -68,6 +67,7 @@ const show_category_list = (categoryName) => {
             proficiencyID = put_dash_between_name(proficiency["Proficiency"])
             proficiencyName = proficiency["Proficiency"]
             proficiencyInput = document.getElementById(proficiencyID)
+            document.getElementById(proficiencyID + "-container").classList.add(put_dash_between_name(categoryName))
             if (data_loaded === false) {
                 if (find_stat(proficiency["Proficiency"],character.profession,"Proficiencies")) {
                     character[proficiencyName] = find_stat(proficiency["Proficiency"],character.profession,"Proficiencies")
@@ -248,6 +248,7 @@ const update_character_stats = () => {
     character.sanity = document.getElementById("SANITY").value
     } catch (TypeError) {
         character.sanity = "0"
+        return
     } 
 
     stats = ["Strength", "Agility", "Intellect", "Will", "Sociability", "MP"]
@@ -288,15 +289,23 @@ const update_character_stats = () => {
     });
 
 
-    
-
     skillsCheck = document.getElementById("skills-check")
+    ancestrySkillHeader = document.getElementById("ancestry-skills-header")
+    ancestrySkillParagraph = document.getElementById("ancestry-skills-paragraph")
+    professionSkillsHeader = document.getElementById("profession-skills-header")
+    professionSkillsParagraph = document.getElementById("profession-skills-paragraph")
 
-    skillsCheck.innerHTML = `
+    ancestrySkillHeader.innerHTML = `
         ${character.ancestry} Skills: <br>
+    `
+    ancestrySkillParagraph.innerHTML = `
         ${find_stat("Skill", character.ancestry,"Ancestry")} <br> 
         <br>
+    `
+    professionSkillsHeader.innerHTML = `
         ${character.profession} Skills and Checks: <br>
+    `
+    professionSkillsParagraph.innerHTML = `
         ${find_stat("Skill", character.profession, "Professions")} <br> 
         <br>
         ${find_stat("Check", character.profession, "Professions")} <br> 

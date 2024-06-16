@@ -14,12 +14,28 @@
     }
 }
 
+:root {
+    --HB_Color_Background: #EEE5CE;
+    --HB_Color_Accent: #E0E5C1;
+    --HB_Color_HeaderUnderline: #C0AD6A;
+    --HB_Color_HorizontalRule: #9C2B1B;
+    --HB_Color_HeaderText: #58180D;
+    --HB_Color_MonsterStatBackground: #F2E5B5;
+    --HB_Color_CaptionText: #766649;
+    --HB_Color_WatercolorStain: #BBAD82;
+    --HB_Color_Footnotes: #C9AD6A;
+}
+
 * {
     margin: 0px;
     padding: 0px;
-    font-family: "EB Garamond", serif;
+    font-family: "Mr Eaves Small Caps", sans-serif;
 }
 
+body {
+    background-image: url(https://homebrewery.naturalcrit.com/assets/parchmentBackground.jpg);
+    background-size: cover;
+}
 #container {
     display: grid;
     grid-template-columns: 10% 30% 35% 25%;
@@ -63,11 +79,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
-    background-color: gray;
-    color: white;
+    font-size: 20px;
+    background-color: var(--HB_Color_Accent);
+    color: var(--HB_Color_HeaderText);
     overflow: hidden;
-    border: solid black 2px;
+    font-family: "Nodesto Caps Condensed", sans-serif;
+    border-image: url(https://homebrewery.naturalcrit.com/assets/noteBorder.png) 12 stretch;
+    border-image-width: 11px;
+    border-image-outset: 9px 0px;
+    border-width: 1px;
+    box-shadow: 1px 4px 14px #888888;
+    
 }
 
 .stat {
@@ -76,21 +98,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 35px;
+    font-size: 50px;
     border: solid black 1px;
+    font-weight: 300;
+    color: var(--HB_Color_HeaderText);
 }
 
 
-
 .info-label {
-    height: 50%;
-    background-color: gray;
+    height: 60%;
+    background-color: var(--HB_Color_Accent);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    color: white;
+    font-size: 22px;
+    color: var(--HB_Color_HeaderText);
     font-weight: bold;
+    border-image: url(https://homebrewery.naturalcrit.com/assets/noteBorder.png) 12 stretch;
+    border-image-width: 11px;
+    border-image-outset: 9px 0px;
+    border-width: 1px;
+    box-shadow: 1px 4px 14px #888888;
+    
 }
 
 #pledge-title-label {
@@ -98,7 +127,7 @@
 }
 
 .character-input {
-    height: 50%;
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -107,6 +136,7 @@
     font-size: 18px;
     transition: all ease 0.3s;
     border: none;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .character-input:hover {
@@ -138,6 +168,7 @@
 #list-label {
     text-align: center;
     font-size: 30px;
+    
 }
 #pledge-box-container {
     aspect-ratio: 1/1;
@@ -158,7 +189,7 @@
 }
 
 #pledge-box {
-    height: 85%;
+    height: max-content;
     background-color: lightgray;
 }
 
@@ -180,6 +211,7 @@
     font-weight: bold;
     color: white;
     background-color: gray;
+    height: min-content;
 }
 #gold-pieces-label {
     grid-column: span 2;
@@ -211,22 +243,44 @@
     text-align: center;
 }
 
+#proficiencies-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#proficiencies-container {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 40px calc(100% - 80px) 40px;
+    border-collapse: separate;
+    background-color: white;
+    border: initial;
+    border-style: solid;
+    border-image-source: url(https://homebrewery.naturalcrit.com/assets/frameBorder.png);
+    border-image-slice: 200;
+    border-image-width: 47px;
+    border-image-outset: .4cm .3cm;
+    border-image-repeat: stretch;
+    
+}
 #proficiencies-label {
     width: 100%;
     text-align: center;
-    height: 30px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: gray;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: "Scaly Sans Caps", sans-serif;
 }
 
 #proficiency-wrapper {
     padding: 5px;
-    height: calc(100vh - 70px);
+    height: 100%;
     overflow: scroll;
     display: flex;
     flex-direction: column;
@@ -235,10 +289,19 @@
 
 .proficiency-container {
     display: flex;
-    width: 100%;
+    width: 95%;
     justify-content: space-between;
-    height: 20px;
+    height: 30px;
     margin: 2px 0px;
+    border: initial;
+    border-style: solid;
+    border-image-source: url(https://homebrewery.naturalcrit.com/assets/frameBorder.png);
+    border-image-slice: 200;
+    border-image-width: 100px;
+    border-image-repeat: stretch;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px white;
 }
 
 .proficiency-title {
@@ -304,7 +367,7 @@
 .edit-prof-container {
     display: flex;
     flex-direction: row;
-    width: 15%;
+    width: 12%;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -356,11 +419,16 @@
     align-items: center;
     flex-direction: row;
     position: relative;
-    border: black 1px solid;
     border-radius: 4px;
     overflow-wrap: normal;
     flex-wrap: nowrap;
     margin-top: 10px;
+    border: initial;
+    border-style: solid;
+    border-image-source: url(https://homebrewery.naturalcrit.com/assets/frameBorder.png);
+    border-image-slice: 200;
+    border-image-width: 100px;
+    border-image-repeat: stretch;
 }
 .category-label {
     height: 25px;
@@ -369,6 +437,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .dropdown-icon {
     position: absolute;
@@ -377,23 +446,29 @@
 }
 
 .Weapons {
-    background-color: rgb(255, 127, 127);
+    box-shadow: 0px 0px 30px 1px rgb(255, 127, 127);
+    background-color: rgb(255, 127, 127) ;
 }
 
 .Armor {
     background-color: lightgray;
+    box-shadow: 0px 0px 30px 1px lightgray;
 }
 
 .Work-Proficiencies {
     background-color: rgb(255, 255, 158);
+    box-shadow: 0px 0px 30px 1px rgb(255, 255, 158);
 }
 
 .Magic-Ability {
     background-color: lightgreen;
+    box-shadow: 0px 0px 30px 1px lightgreen;
 }
 
 #SANITY-container {
     background-color: lightblue;
+    box-shadow: 0px 0px 30px 1px lightblue;
+    align-self: center;
 }
 
 #PROFESSIONS-container {
@@ -411,31 +486,44 @@
 }
 
 #big-prof-container {
-    position: relative;
     margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#proficiencies-container {
-    height: 100%;
-    display: grid;
-    grid-template-rows: 30px calc(100vh - 70px) 40px;
+
+#skills-check-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 #skills-check-container {
-    border-left: black 5px solid;
-    border-right: black 5px solid;
+    width: 90%;
+    border-style: solid;
+    border-width: 7px;
+    border-image: url(https://homebrewery.naturalcrit.com/assets/descriptiveBorder.png) 12 stretch;
+    border-image-outset: 4px;
+    box-shadow: 0 0 6px #FAF7EA;
+    padding: 3px 0px;
+    background-color: white;
+    height: 90%;
+    overflow: scroll;
 }
 #skills-check-label {
-    height: 30px;
-    background-color: gray;
-    text-align: center;
-    color: white;
-    font-size: 20px;
+    height: 80px;
+    color: var(--HB_Color_HeaderText);
+    font-size: 35px;
     font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
 }
 
 #skills-check {
     padding: 30px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .category-list-container {
@@ -446,4 +534,21 @@
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill-check-header {
+    border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
+    color: var(--HB_Color_HeaderText);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-check-paragraph {
+    font-family: 'Bookinsanity', sans-serif;
+    font-size: 15px;
 }

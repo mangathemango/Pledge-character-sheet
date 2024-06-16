@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c418327c57.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="solbera-dnd-fonts/stylesheet.css">
 </head>
 <body>
     <div id="container">
@@ -73,18 +71,25 @@
                 <input type="text" class="equipment"><input type="text" class="equipment"><input type="text" class="equipment">
             </div>
         </div>
-        <div id="proficiencies-container">
-            <p id="proficiencies-label">Proficiencies</p>
-            <div id="proficiency-wrapper">
-
+        <div id="proficiencies-outer-container">
+            <div id="proficiencies-container">
+                <p id="proficiencies-label">Proficiencies</p>
+                <div id="proficiency-wrapper">
+    
+                </div>
+                <div id="big-prof-container"></div>
             </div>
-            <div id="big-prof-container"></div>
         </div>
-        <div id="skills-check-container">
-            <p id="skills-check-label">Skills, Checks, and Saving Throws</p>
-            <p id="skills-check">
-
-            </p>
+        <div id="skills-check-outer-container">
+            <div id="skills-check-container">
+                <p id="skills-check-label">Skills, Checks and Saving Throws</p>
+                <div id="skills-check">
+                    <p id="ancestry-skills-header" class="skill-check-header"></p>
+                    <p id="ancestry-skills-paragraph" class="skill-check-paragraph"></p>
+                    <p id="profession-skills-header" class="skill-check-header"></p>
+                    <p id="profession-skills-paragraph" class="skill-check-paragraph"></p>
+                </div>
+            </div>
         </div>
         <div id="shadow"></div>
     </div>
