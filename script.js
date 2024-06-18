@@ -28,7 +28,6 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
             if (category && proficiency_types.includes(category) != true) {
                 proficiency_types.push(category)
                 proficiencies_box.append(create_category_element(category))
-                // show_category_list(Category)
             }
         })
     
@@ -44,15 +43,7 @@ const create_category_element = (categoryName) => {
     categoryContainer.id = put_dash_between_name(categoryName + "-container")
     categoryContainer.setAttribute("onclick",`javascript: show_category_list("${categoryName}")`)
 
-    categoryLabel = document.createElement("p")
-    categoryLabel.className = "category-label"
-    categoryLabel.textContent = categoryName
-    categoryContainer.append(categoryLabel)
-
-    icon = document.createElement("i");
-    icon.className = "fa-solid fa-caret-down dropdown-icon";
-    categoryContainer.append(icon)
-    
+    categoryContainer.innerHTML = `<p class="category-label">${categoryName}</p>`
     return categoryContainer
 }
 
@@ -91,42 +82,19 @@ const create_proficiency_element = (proficiency) => {
     proficiencyContainer.className = "proficiency-container";
     proficiencyContainer.id = put_dash_between_name(proficiencyName) + "-container"
 
-    const proficiencyTitle = document.createElement("p");
-    proficiencyTitle.className = "proficiency-title";
-    proficiencyTitle.textContent = proficiencyName;
-    proficiencyContainer.append(proficiencyTitle);
+    const proficiencyValue = find_stat(proficiencyName, character["Profession"], "Proficiencies") || 0
+    const proficiencyID = put_dash_between_name(proficiencyName)
 
-    const proficiencyInput = document.createElement("input");
-    proficiencyInput.type = "range";
-    proficiencyInput.min = `${find_stat(proficiencyName, character["Profession"], "Proficiencies") || 0}`
-    proficiencyInput.max = "5";
-    proficiencyInput.value = proficiencyInput.min
-    proficiencyInput.disabled = true;
-    proficiencyInput.id = put_dash_between_name(proficiencyName);
-    proficiencyInput.className = "proficiency-input";
-    proficiencyContainer.append(proficiencyInput);
-
-    const editProfContainer = document.createElement("div");
-    editProfContainer.className = "edit-prof-container";
-    proficiencyContainer.append(editProfContainer);
-
-    const removeProf = document.createElement("button");
-    removeProf.className = "remove-prof-button";
-    removeProf.setAttribute("onclick", `javascript: edit_prof("${proficiencyInput.id}", -1)`);
-    removeProf.textContent = "-";
-    editProfContainer.append(removeProf);
-
-    const profDisplay = document.createElement("p");
-    profDisplay.className = "prof-display";
-    profDisplay.id = `${proficiencyInput.id}-display`;
-    profDisplay.textContent = 0;
-    editProfContainer.append(profDisplay);
-
-    const addProf = document.createElement("button");
-    addProf.className = "add-prof-button";
-    addProf.setAttribute("onclick", `javascript: edit_prof("${proficiencyInput.id}", 1)`);
-    addProf.textContent = "+";
-    editProfContainer.append(addProf);
+    proficiencyContainer.innerHTML = `
+    <p class="proficiency-title">${proficiencyName}</p>
+    <input type="range" min="${proficiencyValue}" 
+    max="5" disabled id="${proficiencyID}" class="proficiency-input" value="${proficiencyValue}" >
+    <div class="edit-prof-container">
+        <button class="remove-prof-button" onclick="javascript:edit_prof('${proficiencyID}', -1)">-</button>
+        <p class="prof-display" id="${proficiencyID}-display">0</p>
+        <button class="add-prof-button" onclick="javascript: edit_prof('${proficiencyID}', 1)">+</button>
+    </div>
+    `
 
     return proficiencyContainer;
 }
