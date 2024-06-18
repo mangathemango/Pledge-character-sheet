@@ -43,11 +43,15 @@ body {
     position: relative;
 }
 
+#character-name {
+    font-size: 20px;
+    font-weight: bold;
+}
 #info-container {
     display: grid;
     grid-template-columns: 100%;
     text-align: center;
-    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr 1.5fr 0.75fr 1fr 0.75fr;
 }
 
 #stats-container {
@@ -71,6 +75,60 @@ body {
     overflow: hidden;
     height: 100px;
 }
+
+#pledge-title-label {
+    height: 40%;
+}
+
+#character-image-container {
+    height: 98%;
+    position: relative;
+    border: none;
+    box-shadow: none;
+}
+#character-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#character-image-file {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#character-image-input {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.file-input-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-name {
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+}
+
+
 
 
 .stat-label {
@@ -106,7 +164,7 @@ body {
 
 
 .info-label {
-    height: 60%;
+    height: 40%;
     background-color: var(--HB_Color_Accent);
     display: flex;
     justify-content: center;
@@ -122,12 +180,8 @@ body {
     
 }
 
-#pledge-title-label {
-    height: 25%;
-}
-
 .character-input {
-    height: 40%;
+    height: 60%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -305,7 +359,7 @@ body {
 }
 
 .proficiency-title {
-    width: 20%;
+    width: 25%;
     text-wrap: nowrap;
     margin: 0px 15px;
     height: 100%;
@@ -367,7 +421,7 @@ body {
 .edit-prof-container {
     display: flex;
     flex-direction: row;
-    width: 12%;
+    width: 15%;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -406,7 +460,7 @@ body {
     align-self: center;
     justify-self: center;
     border: black 1px solid;
-    font-size: 12px;
+    font-size: 18px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -419,6 +473,7 @@ body {
     align-items: center;
     flex-direction: row;
     position: relative;
+    justify-content: center;
     border-radius: 4px;
     overflow-wrap: normal;
     flex-wrap: nowrap;
@@ -430,14 +485,17 @@ body {
     border-image-width: 100px;
     border-image-repeat: stretch;
 }
+
+.category:hover, .proficiency-container:hover {
+    font-weight: bolder;
+}
 .category-label {
-    height: 25px;
+    height: 30px;
     width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 .dropdown-icon {
     position: absolute;
@@ -446,23 +504,23 @@ body {
 }
 
 .Weapons {
-    box-shadow: 0px 0px 30px 1px rgb(255, 127, 127);
+    box-shadow: 0px 0px 10px 1px rgb(255, 127, 127);
     background-color: rgb(255, 127, 127) ;
 }
 
 .Armor {
     background-color: lightgray;
-    box-shadow: 0px 0px 30px 1px lightgray;
+    box-shadow: 0px 0px 10px 1px lightgray;
 }
 
 .Work-Proficiencies {
     background-color: rgb(255, 255, 158);
-    box-shadow: 0px 0px 30px 1px rgb(255, 255, 158);
+    box-shadow: 0px 0px 10px 1px rgb(255, 255, 158);
 }
 
 .Magic-Ability {
     background-color: lightgreen;
-    box-shadow: 0px 0px 30px 1px lightgreen;
+    box-shadow: 0px 0px 10px 1px lightgreen;
 }
 
 #SANITY-container {

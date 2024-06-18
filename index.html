@@ -12,32 +12,33 @@
 <body>
     <div id="container">
         <div id="info-container">
+            <div id="character-image-container" class="info-label">
+                <div class="file-input-wrapper">
+                    <input type="file" id="character-image-input" class="file-input" accept="image/png" />
+                    <label for="character-image-input" class="file-input-label" id="character-image-label">Upload Character Image</label>
+                    <span id="fileName" class="file-name"></span>
+                </div>
+                <div id="character-image" class="file-content"></div>
+            </div>
             <div id="char-name-container">
                 <p id="char-name-label" class="info-label">Character Name:</p>
                 <input id="character-name" type="text" class="character-input" placeholder="Enter name">
             </div> 
             <div id="pledge-title-container">
                 <p id="pledge-title-label" class="info-label">Pledge Title:</p>
+                <p id="pledge-title" class="character-input"></p>
             </div>
             <div id="profession-container">
                 <p id="profession-label" class="info-label">Profession</p>
-                <p id="profession" class="character-input" onclick="javascript:show_list('Professions')">Boatman</p>
+                <p id="profession" class="character-input" onclick="javascript:show_list('Professions')"></p>
             </div>
             <div id="pledge-container">
                 <p id="pledge-label" class="info-label">Pledge</p>
-                <p id="pledge" class="character-input" onclick="javascript:show_list('Pledge')">Pledgeless</p>
+                <p id="pledge" class="character-input" onclick="javascript:show_list('Pledge')"></p>
             </div>
             <div id="ancestry-container">
                 <p id="ancestry-label" class="info-label">Ancestry</p>
-                <p id="ancestry" class="character-input" onclick="javascript:show_list('Ancestry')">Human</p>
-            </div>
-            <div id="physical-condition-container">
-                <p id="physical-condition-label" class="info-label">Physical Condition</p>
-                <p id="physical-condition" class="character-input" onclick="javascript:show_list('Physical Condition')">Normal</p>
-            </div>
-            <div id="mental-condition-container">
-                <p id="mental-condition-label" class="info-label">Mental Condition</p>
-                <p id="mental-condition" class="character-input" onclick="javascript:show_list('Mental Condition')">Neutral</p>
+                <p id="ancestry" class="character-input" onclick="javascript:show_list('Ancestry')"></p>
             </div>
         </div>
         <div id="stats-container">
@@ -56,8 +57,10 @@
                 <p class="stat" id="MP">0</p>
             </div>
             <div id="pledge-box-container">
-                <p id="pledge-box-label">PLEDGE</p>
-                <div id="pledge-box"></div>
+                <div id="mental-condition-container">
+                    <p id="mental-condition-label" class="info-label">Mental Condition</p>
+                    <p id="mental-condition" class="character-input" onclick="javascript:show_list('Mental Condition')">Neutral</p>
+                </div>
             </div>
             <div id="equipment-box-container">
                 <p id="equipment-label">Equipment</p>
@@ -77,7 +80,17 @@
                 <div id="proficiency-wrapper">
     
                 </div>
-                <div id="big-prof-container"></div>
+                <div id="big-prof-container">
+                    <div class="proficiency-container big_prof" id="SANITY-container">
+                        <p class="proficiency-title">SANITY</p><input type="range" min="undefined" max="5" disabled="" id="SANITY"
+                            class="proficiency-input">
+                        <div class="edit-prof-container"><button class="remove-prof-button"
+                                onclick="javascript: edit_prof('SANITY', -1)">-</button>
+                            <p class="prof-display" id="SANITY-display">5</p><button class="add-prof-button"
+                                onclick="javascript: edit_prof('SANITY', +1)">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="skills-check-outer-container">

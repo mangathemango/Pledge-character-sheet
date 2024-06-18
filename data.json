@@ -295,7 +295,7 @@
       "Column16": 0
      },
      {
-      "Proficiencies": "Aquatic ",
+      "Proficiencies": "Aquatic",
       "Column12": 0,
       "Column13": 0,
       "Column14": 0,
@@ -528,7 +528,7 @@
       "Stat Boost": "MP"
      },
      {
-      "Proficiency": "Aquatic ",
+      "Proficiency": "Aquatic",
       "Category": "Magic Ability",
       "Stat Boost": "MP"
      },
