@@ -65,7 +65,7 @@ body {
 
 #basic-stats-container {
     width: 100%;
-    border-bottom: black solid 10px;
+    border-bottom: black solid 3px;
     display: grid;
     grid-template-columns: repeat(6,16.66%);
     grid-template-rows: 30% 70%;
@@ -80,6 +80,28 @@ body {
     height: 40%;
 }
 
+#physical-condition-container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+
+#mental-condition-container {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#mental-condition-label {
+    width: 100%;
+    height: 60%;
+}
 #character-image-container {
     height: 98%;
     position: relative;
@@ -187,7 +209,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     transition: all ease 0.3s;
     border: none;
     background-color: rgba(255, 255, 255, 0);
@@ -253,9 +275,18 @@ body {
     grid-template-columns: repeat(3,33.3%);
     grid-template-rows: repeat(9,11.1%);
     height: 40%;
+    border: initial;
+    border-style: solid;
+    border-image-source: url(https://homebrewery.naturalcrit.com/assets/frameBorder.png);
+    border-image-slice: 200;
+    border-image-width: 100px;
+    border-image-repeat: stretch;
+    padding-top: 35px;
+    
 }
 #equipment-label {
-    width: 100%;
+    width: 80%;
+    justify-self: center;
     grid-column: span 3;
     grid-row: span 2;
     display: flex;
@@ -263,8 +294,13 @@ body {
     justify-content: center;
     font-size: 35px;
     font-weight: bold;
-    color: white;
-    background-color: gray;
+    color: var(--HB_Color_HeaderText);
+    border: initial;
+    border-style: solid;
+    border-image-source: url(https://homebrewery.naturalcrit.com/assets/frameBorder.png);
+    border-image-slice: 200;
+    border-image-width: 100px;
+    border-image-repeat: stretch;
     height: min-content;
 }
 #gold-pieces-label {
@@ -610,4 +646,8 @@ body {
 .skill-check-paragraph {
     font-family: 'Bookinsanity', sans-serif;
     font-size: 15px;
+}
+
+.body-part-container {
+    height: 35px;
 }

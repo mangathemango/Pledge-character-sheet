@@ -1,8 +1,8 @@
 {
     "Name": "Chicken Nugget",
-    "Profession": "Chef",
-    "Ancestry": "Fairy",
-    "Pledge": "Pledge of Gluttony",
+    "Profession": "Professionless",
+    "Ancestry": "Human",
+    "Pledge": "Pledgeless",
     "Stats": {
         "Strength": 0,
         "Agility": 0,
@@ -13,14 +13,14 @@
     },
     "Physical Condition": {
         "Head": 5,
-        "Left Arm": 5,
-        "Right Arm": 5,
+        "Left Arm": "disabled",
+        "Right Arm": "disabled",
         "Chest": 5,
         "Torso": 5,
-        "Left Leg": 5,
-        "Right Leg": 5
+        "Left Leg": "disabled",
+        "Right Leg": "disabled"
     },
-    "Mental Condition": "Neutral",
+    "Mental Condition": "Depressed",
     "Gold Pieces": 0,
     "Ethereal Gold": 0,
     "Inventory": {},

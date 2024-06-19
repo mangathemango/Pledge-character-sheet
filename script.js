@@ -4,6 +4,7 @@ const proficiencies_box = document.getElementById("proficiency-wrapper")
 const container = document.getElementById("container")
 const shadow = document.getElementById("shadow")
 const style = document.createElement('style');
+const physicalConditionBox = document.getElementById("physical-condition-container")
 let listEaseTime = 800 // miliseconds
 let list_shown = false
 document.head.appendChild(style);
@@ -17,18 +18,42 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
     
         proficiency_types = []
         pledge_data["Work proficiency"].forEach(proficiency => {
-            proficiencyName = proficiency["Proficiency"]
+            const proficiencyName = proficiency["Proficiency"]
+            const characterSanity = character.Proficiencies["SANITY"]
             if (proficiencyName === "SANITY") {
-                document.getElementById("SANITY").value = character.Proficiencies["SANITY"]
-                updateSliderTrack(character.Proficiencies["SANITY"],"SANITY")
+                document.getElementById("SANITY").value = characterSanity
+                updateSliderTrack(characterSanity,"SANITY")
                 return
             }
-            character.Proficiencies[proficiencyName] = find_stat(proficiencyName,character["Profession"],"Proficiencies") || 0
+
+            const professionProficiency = find_stat(proficiencyName,character["Profession"],"Proficiencies")
+
+            let characterProficiency = character.Proficiencies[proficiencyName]
+            
+            if (!characterProficiency) {
+                character.Proficiencies[proficiencyName] = professionProficiency || 0
+            } else {
+                if (characterProficiency > 5) {
+                    character.Proficiencies[proficiencyName] = 5
+                } 
+                if (characterProficiency < professionProficiency) {
+                    character.Proficiencies[proficiencyName] = professionProficiency
+                }
+            }
+
             category = proficiency["Category"]
             if (category && proficiency_types.includes(category) != true) {
                 proficiency_types.push(category)
                 proficiencies_box.append(create_category_element(category))
             }
+        })
+
+        pledge_data["Body Part Stats"].forEach(bodyPart => {
+            physicalConditionBox.append(create_body_part_element(bodyPart))
+            if (character["Physical Condition"][bodyPart["Body Part"]] != "disabled") {
+                updateSliderTrack(character["Physical Condition"][bodyPart["Body Part"]],put_dash_between_name(bodyPart["Body Part"]))
+            }
+            
         })
     
         update_character_stats()
@@ -82,12 +107,13 @@ const create_proficiency_element = (proficiency) => {
     proficiencyContainer.className = "proficiency-container";
     proficiencyContainer.id = put_dash_between_name(proficiencyName) + "-container"
 
-    const proficiencyValue = find_stat(proficiencyName, character["Profession"], "Proficiencies") || 0
+    const proficiencyMin = find_stat(proficiencyName, character["Profession"], "Proficiencies") || 0
+    const proficiencyValue = character.Proficiencies[proficiencyName] || proficiencyMin
     const proficiencyID = put_dash_between_name(proficiencyName)
 
     proficiencyContainer.innerHTML = `
     <p class="proficiency-title">${proficiencyName}</p>
-    <input type="range" min="${proficiencyValue}" 
+    <input type="range" min="${proficiencyMin}" 
     max="5" disabled id="${proficiencyID}" class="proficiency-input" value="${proficiencyValue}" >
     <div class="edit-prof-container">
         <button class="remove-prof-button" onclick="javascript:edit_prof('${proficiencyID}', -1)">-</button>
@@ -97,6 +123,40 @@ const create_proficiency_element = (proficiency) => {
     `
 
     return proficiencyContainer;
+}
+
+const create_body_part_element = (bodyPart) => {
+    const bodyPartName = bodyPart["Body Part"] 
+    const bodyPartContainer = document.createElement("div");
+    bodyPartContainer.className = "proficiency-container body-part-container";
+    bodyPartContainer.id = put_dash_between_name(bodyPartName) + "-container"
+
+    const bodyPartID = put_dash_between_name(bodyPartName)
+    const bodyPartValue = character["Physical Condition"][bodyPartName]
+
+    bodyPartContainer.innerHTML = `
+    <p class="proficiency-title">${bodyPartName}</p>
+    <input type="range" min="${0}" 
+    max="5" disabled id="${bodyPartID}" class="proficiency-input" value="${bodyPartValue}" >
+    <div class="edit-prof-container">
+        <button class="remove-prof-button" onclick="javascript:editBodyPart('${bodyPartID}', -1)">-</button>
+        <p class="prof-display" id="${bodyPartID}-display">0</p>
+        <button class="add-prof-button" onclick="javascript:editBodyPart('${bodyPartID}', 1)">+</button>
+    </div>
+    `
+    if (bodyPartValue === "disabled") {
+        bodyPartContainer.innerHTML = `
+        <p class="proficiency-title">${bodyPartName}</p>
+        <input type="range" min="${0}" 
+        max="5" disabled id="${bodyPartID}" class="proficiency-input" value="${bodyPartValue}" >
+        <div class="edit-prof-container">
+            <p>DISABLED</p>
+        </div>
+        `
+    }
+    
+    
+    return bodyPartContainer
 }
 
 // This will need to be fixed holy hell
@@ -135,6 +195,15 @@ const edit_prof = (id, value) => {
     update_character_stats()
 }
 
+const editBodyPart = (id, value) => {
+    bodyPartInput = document.getElementById(id) 
+    bodyPartInput.value = parseInt(bodyPartInput.value) + value
+    character["Physical Condition"][id.replace("-", " ")] = parseInt(bodyPartInput.value)
+    updateSliderTrack(bodyPartInput.value,id)
+    update_character_stats()
+    console.log(character["Physical Condition"])
+}
+
 const find_stat = (stat, type, category) => {
     return pledge_data[category].find(element => element[category] === type)[stat]
 }
@@ -155,7 +224,6 @@ const handleEnter = (event) => {
 }
 
 const show_list = (category) => {
-    
     if (list_shown === false) {
         list_shown = true
         list = document.createElement("div")
@@ -213,7 +281,19 @@ const update_character_stats = () => {
         pledge_data["Work proficiency"].filter(element => element["Stat Boost"] === stat).forEach(proficiency => {
             proficiencyBoost += parseInt(character.Proficiencies[proficiency["Proficiency"]])
         })
-
+        
+        bodyPartReducts = 0
+        bodyPartValue = 5
+        pledge_data["Body Part Stats"].filter(element => element["Stat Reducts"].split(" ").includes(stat)).forEach(bodyPart => {
+            const bodyPartName = bodyPart["Body Part"]
+            if (character["Physical Condition"][bodyPartName] != "disabled") {
+                bodyPartValue = character["Physical Condition"][bodyPartName]
+            } else {
+                bodyPartValue = 0
+            }
+            console.log(bodyPartValue)
+            bodyPartReducts += (5 - bodyPartValue)
+        })
         if (stat === "MP") {
             spellAttackModifier = 0 
             if (find_stat("Spell Attack Modifier",character["Profession"],"Professions") != "None") {
@@ -233,14 +313,14 @@ const update_character_stats = () => {
             (proficiencyBoost/2) +
             find_stat(stat,character["Ancestry"],"Ancestry") + 
             find_stat(stat,character["Mental Condition"],"Mental Condition") + 
-            find_stat(stat,character["Profession"],"Professions") 
-        }
-        
+            find_stat(stat,character["Profession"],"Professions") -
+            (bodyPartReducts / 2)
+        }        
 
         document.getElementById(stat).textContent = character[stat]
     });
 
-
+    // Skills Check and Saving Throws 
     skillsCheck = document.getElementById("skills-check")
     ancestrySkillHeader = document.getElementById("ancestry-skills-header")
     ancestrySkillParagraph = document.getElementById("ancestry-skills-paragraph")
@@ -298,3 +378,11 @@ document.getElementById('character-image-input').addEventListener('change', func
     }
 });
 
+// This is for a future "Export Character" function 
+let characterSaved = true
+window.addEventListener('beforeunload', function (event) {
+    if (!characterSaved) {
+        event.preventDefault();
+    }
+    event.returnValue = '';
+});
