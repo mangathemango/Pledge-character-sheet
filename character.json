@@ -3,14 +3,6 @@
     "Profession": "Professionless",
     "Ancestry": "Human",
     "Pledge": "Pledgeless",
-    "Stats": {
-        "Strength": 0,
-        "Agility": 0,
-        "Intellect": 0,
-        "Will": 0,
-        "Sociability": 0,
-        "MP":0
-    },
     "Physical Condition": {
         "Head": 5,
         "Left Arm": "disabled",

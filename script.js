@@ -147,14 +147,9 @@ const create_body_part_element = (bodyPart) => {
     if (bodyPartValue === "disabled") {
         bodyPartContainer.innerHTML = `
         <p class="proficiency-title">${bodyPartName}</p>
-        <input type="range" min="${0}" 
-        max="5" disabled id="${bodyPartID}" class="proficiency-input" value="${bodyPartValue}" >
-        <div class="edit-prof-container">
-            <p>DISABLED</p>
-        </div>
+        <p class="disabled-text">DISABLED</p>
         `
     }
-    
     
     return bodyPartContainer
 }

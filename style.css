@@ -57,7 +57,7 @@ body {
 #stats-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     border-right: black solid 5px;
     border-left: black solid 5px;
     align-items: center;
@@ -270,28 +270,24 @@ body {
 }
 
 #equipment-box-container {
-    display: grid;
+    display: flex;
+    align-items: center;
     width: 100%;
-    grid-template-columns: repeat(3,33.3%);
-    grid-template-rows: repeat(9,11.1%);
-    height: 40%;
+    height: 35%;
     border: initial;
     border-style: solid;
     border-image-source: url(https://homebrewery.naturalcrit.com/assets/frameBorder.png);
     border-image-slice: 200;
     border-image-width: 100px;
     border-image-repeat: stretch;
-    padding-top: 35px;
-    
+    padding: 25px 0px;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 #equipment-label {
     width: 80%;
     justify-self: center;
-    grid-column: span 3;
-    grid-row: span 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     font-size: 35px;
     font-weight: bold;
     color: var(--HB_Color_HeaderText);
@@ -303,34 +299,91 @@ body {
     border-image-repeat: stretch;
     height: min-content;
 }
-#gold-pieces-label {
-    grid-column: span 2;
-    grid-row: span 2;
+
+#equipments {
+    width: 80%;
+    border: var(--HB_Color_HeaderText) 2px solid;
+    border-radius: 10px;
+    height: 70%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--HB_Color_HeaderText);
+}
+
+#on-hold {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: var(--HB_Color_HeaderText) 2px solid;
+    height: 80%;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--HB_Color_Accent);
+    justify-content: space-evenly;
+}
+
+#on-hold-item {
+    height: 80%;
+}
+
+#on-hold-label {
+    font-size: 20px;
     font-weight: bold;
-    font-size: 25px;
-    background-color: rgb(255, 255, 170);
+    color: var(--HB_Color_HeaderText);
+    margin-top: 10px;
+    text-wrap: nowrap;
+}
+.gold-container {
+    display: flex;
+    justify-content: space-evenly;
+    border: var(--HB_Color_HeaderText) 2px solid;
+    background-color: var(--HB_Color_MonsterStatBackground);
+    border-radius: 10px;
+    width: 35%;
+    align-items: center;
 }
 
-.equipment-label {
+#gold-wrapper {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    height: 20%;
+    margin-top: 10px;
+}
+
+.gold-count {
+    font-size: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: gray 1px solid;
 }
-#gold-pieces {
-    grid-row: span 2;
+#inventory {
+    width: 45%;
+    height: 80%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    font-size: 30px;
-    background-color: lightgray;
+    background-color: var(--HB_Color_Accent);
+    border-radius: 10px;
+    padding: 5px;
 }
 
-.equipment {
-    text-align: center;
+#on-hold-item {
+    border: var(--HB_Color_HeaderText) 2px solid;
+    aspect-ratio: 1/1;
+    width: 80%;
+    height: 60%;
+}
+
+.gold-img {
+    height: 80%;
+}
+
+#backpack {
+    height: 75%;
 }
 
 #proficiencies-outer-container {
@@ -649,5 +702,13 @@ body {
 }
 
 .body-part-container {
-    height: 35px;
+    height: 15%;
+    width: 98%;
+}
+
+.disabled-text {
+    justify-self: center;
+    align-self: center;
+    width: 80px;
+    font-size: 15px;
 }
