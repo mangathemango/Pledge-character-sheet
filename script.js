@@ -56,8 +56,6 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
         })
     
         update_character_stats()
-        show_list("Ancestry")
-
     })
 })
 
@@ -238,15 +236,16 @@ const show_list = (category) => {
 
         list.innerHTML = `<p id="list-label">${category}</p>`
         container.append(list)
-        if (category === "Ancestry") {
-            const ancestryContainer = document.createElement("div")
-            ancestryContainer.id = "ancestries-wrapper"
-            list.append(ancestryContainer)
 
+        const contentContainer = document.createElement("div")
+        list.append(contentContainer)
+
+        if (category === "Ancestry") {
+            contentContainer.id = "ancestries-wrapper"
             pledge_data["Ancestry"].forEach(Ancestry => {
                 AncestryName = Ancestry["Ancestry"]
                 AncestrySkills = Ancestry["Skill"].split("<br><br>").map(skill => skill.split(":")[0].replace("  ", ""))
-                ancestryContainer.innerHTML += `
+                contentContainer.innerHTML += `
                 <div id=${AncestryName}-container class="ancestry-container" onclick='javascript:change_stat("${AncestryName}","Ancestry")'>
                     <p class="ancestry-title">${AncestryName}</p>
                     <img src="" alt="Picture of ${AncestryName}" class="ancestry-img">
@@ -291,6 +290,17 @@ const show_list = (category) => {
             })
         }
         
+        if (category === "Profession") {
+            contentContainer.id = "profession-wrapper"
+            pledge_data["Professions"].forEach(profession => {
+                const professionName = profession["Professions"]
+                contentContainer.innerHTML += `
+                <div class="profession-container">
+                    <p>${professionName}</p>
+                </div>
+                `
+            })
+        }
     }
 }
 
