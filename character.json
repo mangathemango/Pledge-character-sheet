@@ -1,18 +1,18 @@
 {
     "Name": "Chicken Nugget",
-    "Profession": "Professionless",
+    "Profession": "Boatman",
     "Ancestry": "Human",
     "Pledge": "Pledgeless",
     "Physical Condition": {
         "Head": 5,
-        "Left Arm": "disabled",
-        "Right Arm": "disabled",
+        "Left Arm": 5,
+        "Right Arm": 5,
         "Chest": 5,
         "Torso": 5,
-        "Left Leg": "disabled",
-        "Right Leg": "disabled"
+        "Left Leg": 5,
+        "Right Leg": 5
     },
-    "Mental Condition": "Depressed",
+    "Mental Condition": "Neutral",
     "Gold Pieces": 0,
     "Ethereal Gold": 0,
     "Inventory": {},

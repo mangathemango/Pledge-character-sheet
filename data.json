@@ -141,6 +141,18 @@
       "Stat Boost": "N\/A"
      },
      {
+      "Proficiency": "Casting",
+      "Category": "Magic Ability",
+      "Stat Boost": "N\/A",
+      "Note": "Refers to how the spell is made."
+     },
+     {
+      "Proficiency": "Formation",
+      "Category": "Magic Ability",
+      "Stat Boost": "N\/A",
+      "Note": "Refers to the form of the spell."
+     },
+     {
       "Proficiency": "Infernal",
       "Category": "Magic Ability",
       "Stat Boost": "MP"
@@ -188,7 +200,7 @@
       "Will": 3,
       "Sociability": 3,
       "MP": 0,
-      "Skill": "Right of Humanity: Whenever in a social situation where you or your party is being disrespected or looked down upon, you can use your Right of Humanity to forcefully make the individual follow your demands. <br><br> Determined: Whenever you are unable to do a Proficiency check due to low stats you can use an attribute score instead."
+      "Skill": "Right of Humanity: Whenever in a social situation where you or your party is being disrespected or looked down upon, you can use your Right of Humanity to forcefully make the individual follow your demands. <br><br>Determined: Whenever you are unable to do a Proficiency check due to low stats you can use an attribute score instead."
      },
      {
       "Ancestry": "Goblin",
@@ -3098,5 +3110,4 @@
       "Magical Armor": 1
      }
     ]
-    
     }

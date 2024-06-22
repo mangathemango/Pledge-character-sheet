@@ -225,13 +225,119 @@ body {
     background-color: white;
     border: black 5px solid;
     position: absolute;
-    height: 70%;
-    width: 50%;
+    height: 80%;
+    width: 70%;
     justify-self: center;
     align-self: center;
-    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#ancestries-wrapper {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.ancestry-container {
+    width: 17%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    border: black solid 4px;
+    padding: 10px 0px;
+    flex-direction: column;
+    transition: ease 0.2s all;
+}
+
+.ancestry-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px 2px black;
+}
+.ancestry-title {
+    font-size: 30px;
+    height: 10%;
+}
+
+.ancestry-img {
+    height: 40%;
+    width: 90%;
+    border: black solid 2px;
+    text-align: center;
+}
+
+.ancestry-stat-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.ancestry-stat-table {
+    margin-top: 10px;
+    width: 92%;
+    border: black solid 2px;
+}
+
+.ancestry-label {
+    font-size: 12px;
+}
+
+.ancestry-stat {
+    font-size: 25px;
+    padding: 0px 1px;
+    text-align: center;
+}
+
+.ancestry-skill-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black solid 2px;
+    width: 90%;
+    height: 22%;
+    padding: 2px 0px;
+}
+
+.ancestry-skill-label {
+    font-size: 20px;
+    font-weight: bold;
+    height: 25%;
+}
+.ancestry-skill-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+}
+
+.ancestry-skill {
+    margin: 2px 0px;
+    width: 90%;
+    border: black 2px solid;
+    text-align: center;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.ancestry-view-more {
+    height: 10%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px;
+    font-weight: bold;
+}
 #shadow {
     z-index: -1;
     background-color: black;
@@ -243,9 +349,13 @@ body {
 
 #list-label {
     text-align: center;
-    font-size: 30px;
-    
+    font-size: 40px;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #pledge-box-container {
     aspect-ratio: 1/1;
     border-bottom: black 5px solid;

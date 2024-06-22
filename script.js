@@ -25,7 +25,6 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
                 updateSliderTrack(characterSanity,"SANITY")
                 return
             }
-
             const professionProficiency = find_stat(proficiencyName,character["Profession"],"Proficiencies")
 
             let characterProficiency = character.Proficiencies[proficiencyName]
@@ -57,6 +56,8 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
         })
     
         update_character_stats()
+        show_list("Ancestry")
+
     })
 })
 
@@ -110,11 +111,11 @@ const create_proficiency_element = (proficiency) => {
     const proficiencyMin = find_stat(proficiencyName, character["Profession"], "Proficiencies") || 0
     const proficiencyValue = character.Proficiencies[proficiencyName] || proficiencyMin
     const proficiencyID = put_dash_between_name(proficiencyName)
+    const proficiencyNote = proficiency["Note"]
 
     proficiencyContainer.innerHTML = `
-    <p class="proficiency-title">${proficiencyName}</p>
-    <input type="range" min="${proficiencyMin}" 
-    max="5" disabled id="${proficiencyID}" class="proficiency-input" value="${proficiencyValue}" >
+    <p class="proficiency-title" title="${proficiencyNote? proficiencyNote : ''}">${proficiencyName}</p>
+    <input type="range" min="${proficiencyMin}" max="5" disabled id="${proficiencyID}" class="proficiency-input" value="${proficiencyValue}" >
     <div class="edit-prof-container">
         <button class="remove-prof-button" onclick="javascript:edit_prof('${proficiencyID}', -1)">-</button>
         <p class="prof-display" id="${proficiencyID}-display">0</p>
@@ -196,7 +197,6 @@ const editBodyPart = (id, value) => {
     character["Physical Condition"][id.replace("-", " ")] = parseInt(bodyPartInput.value)
     updateSliderTrack(bodyPartInput.value,id)
     update_character_stats()
-    console.log(character["Physical Condition"])
 }
 
 const find_stat = (stat, type, category) => {
@@ -232,18 +232,73 @@ const show_list = (category) => {
             shadow.addEventListener("click",close_list)
         }, listEaseTime);
 
-
-        label = document.createElement("p")
-        label.id = "list-label"
-        label.textContent = category
-        list.append(label)
-        
         shadow.style.transition = `all ease ${listEaseTime/2000}s`
         shadow.style.opacity = "80%"
         shadow.style.zIndex = "1"
 
+        list.innerHTML = `<p id="list-label">${category}</p>`
         container.append(list)
+        if (category === "Ancestry") {
+            const ancestryContainer = document.createElement("div")
+            ancestryContainer.id = "ancestries-wrapper"
+            list.append(ancestryContainer)
+
+            pledge_data["Ancestry"].forEach(Ancestry => {
+                AncestryName = Ancestry["Ancestry"]
+                AncestrySkills = Ancestry["Skill"].split("<br><br>").map(skill => skill.split(":")[0].replace("  ", ""))
+                ancestryContainer.innerHTML += `
+                <div id=${AncestryName}-container class="ancestry-container" onclick='javascript:change_stat("${AncestryName}","Ancestry")'>
+                    <p class="ancestry-title">${AncestryName}</p>
+                    <img src="" alt="Picture of ${AncestryName}" class="ancestry-img">
+                    <table border="1" class="ancestry-stat-table">
+                        <tr class="ancestry-stat-label">
+                            <th class="ancestry-label">STR</th>
+                            <th class="ancestry-label">AGI</th>
+                            <th class="ancestry-label">INT</th>
+                            <th class="ancestry-label">WIL</th>
+                            <th class="ancestry-label">SCB</th>
+                        </tr>
+                        <td class="ancestry-stat">+${Ancestry["Strength"]}</td>  
+                        <td class="ancestry-stat">+${Ancestry["Agility"]}</td>
+                        <td class="ancestry-stat">+${Ancestry["Intellect"]}</td>
+                        <td class="ancestry-stat">+${Ancestry["Will"]}</td>
+                        <td class="ancestry-stat">+${Ancestry["Sociability"]}</td>                      
+                    </table>
+                    <div class="ancestry-skill-container">
+                        <p class="ancestry-skill-label">Skills</p>
+                        <div class="ancestry-skill-wrapper">
+                            <p class="ancestry-skill">${AncestrySkills[0]}</p>
+                            <p class="ancestry-skill">${AncestrySkills[1]}</p>
+                        </div>
+                    </div>
+                    <p class="ancestry-view-more" id="${AncestryName}-selected">${AncestryName === character["Ancestry"]? 'SELECTED' : ''}</p>
+                </div>
+                `
+            })
+            document.querySelectorAll(".ancestry-container").forEach( ancestryWrapper => {
+                ancestryWrapper.addEventListener("mousedown", () => {
+                    ancestryWrapper.style.transform = "translateY(0px)"
+                })
+                ancestryWrapper.addEventListener("mouseup", () => {
+                    ancestryWrapper.style.transform = "translateY(-10px)"
+                })
+                ancestryWrapper.addEventListener("mouseover", () => {
+                    ancestryWrapper.style.transform = "translateY(-10px)"
+                })
+                ancestryWrapper.addEventListener("mouseleave", () => {
+                    ancestryWrapper.style.transform = "translateY(0px)"
+                })
+            })
+        }
+        
     }
+}
+
+const change_stat = (value, stat) => {
+    document.getElementById(character[stat] + "-selected").textContent = ""
+    character[stat] = value
+    document.getElementById(character[stat] + "-selected").textContent = "SELECTED"
+    update_character_stats()
 }
 
 const close_list = () => {
@@ -286,7 +341,6 @@ const update_character_stats = () => {
             } else {
                 bodyPartValue = 0
             }
-            console.log(bodyPartValue)
             bodyPartReducts += (5 - bodyPartValue)
         })
         if (stat === "MP") {
@@ -373,7 +427,7 @@ document.getElementById('character-image-input').addEventListener('change', func
     }
 });
 
-// This is for a future "Export Character" function 
+// This is for the future "Export Character" function 
 let characterSaved = true
 window.addEventListener('beforeunload', function (event) {
     if (!characterSaved) {
