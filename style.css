@@ -254,7 +254,7 @@ body {
     transition: ease 0.2s all;
 }
 
-.ancestry-container:hover {
+.ancestry-container:hover, .profession-container:hover {
     transform: translateY(-10px);
     box-shadow: 0px 10px 30px 2px black;
 }
@@ -342,20 +342,97 @@ body {
 
 #profession-wrapper {
     height: 80%;
-    width: 100%;
+    width: 95%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-auto-rows: 30%;
     grid-auto-flow: row;
     overflow: scroll;
+    gap: 15px;
+    padding: 20px;
 }
 
 .profession-container {
     display: flex;
+    padding: 3px;
+    border: black solid 3px;
+    transition: all ease 0.3s;
+}
+
+
+
+.profession-info-container {
+    width: 60%;
+    margin-left: 10px;
+}
+.profession-stat-table {
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 34px;
-    
+    width: max-content;
+    border: black solid 2px;
+}
+.profession-label {
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+.profession-skill-container {
+    display: flex;
+    height: 26%;
+    border: black solid 2px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.profession-skill-label {
+    width: 30%;
+    border-right: black solid 2px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.profession-selected {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profession-skill {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.spellmod-profession {
+    background-color: #E0E5C1;
+}
+
+.profession-main-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profession-img {
+    border: black solid 2px;
+    width: 100%;
+    height: 80%;
 }
 #shadow {
     z-index: -1;
