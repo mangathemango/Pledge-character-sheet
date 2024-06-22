@@ -56,7 +56,7 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
         })
     
         update_character_stats()
-        show_list("Profession")
+        show_list("Pledge")
     })
 })
 
@@ -217,6 +217,11 @@ const handleEnter = (event) => {
     }
 }
 
+/**
+ * 
+ * @param {String} category 
+ * @returns {null}
+ */
 const show_list = (category) => {
     if (list_shown === false) {
         list_shown = true
@@ -243,6 +248,8 @@ const show_list = (category) => {
 
         if (category === "Ancestry") {
             contentContainer.id = "ancestries-wrapper"
+            const SpellMod = character["Spell Attack Modifier"]
+            console.log(SpellMod)
             pledge_data["Ancestry"].forEach(Ancestry => {
                 AncestryName = Ancestry["Ancestry"]
                 AncestrySkills = Ancestry["Skill"].split("<br><br>").map(skill => skill.split(":")[0].replace("  ", ""))
@@ -252,17 +259,17 @@ const show_list = (category) => {
                     <img src="" alt="Picture of ${AncestryName}" class="ancestry-img">
                     <table border="1" class="ancestry-stat-table">
                         <tr class="ancestry-stat-label">
-                            <th class="ancestry-label">STR</th>
-                            <th class="ancestry-label">AGI</th>
-                            <th class="ancestry-label">INT</th>
-                            <th class="ancestry-label">WIL</th>
-                            <th class="ancestry-label">SCB</th>
+                            <th ${SpellMod === "Strength"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>STR</th>
+                            <th ${SpellMod === "Agility"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>AGI</th>
+                            <th ${SpellMod === "Intellect"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>INT</th>
+                            <th ${SpellMod === "Will"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>WIL</th>
+                            <th ${SpellMod === "Sociability"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>SCB</th>
                         </tr>
-                        <td class="ancestry-stat">+${Ancestry["Strength"]}</td>  
-                        <td class="ancestry-stat">+${Ancestry["Agility"]}</td>
-                        <td class="ancestry-stat">+${Ancestry["Intellect"]}</td>
-                        <td class="ancestry-stat">+${Ancestry["Will"]}</td>
-                        <td class="ancestry-stat">+${Ancestry["Sociability"]}</td>                      
+                        <td ${SpellMod === "Strength"? 'title = "Spell Attack Modifier (based on profession)" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'} >+${Ancestry["Strength"]}</td>  
+                        <td ${SpellMod === "Agility"? 'title = "Spell Attack Modifier (based on profession)" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'} >+${Ancestry["Agility"]}</td>
+                        <td ${SpellMod === "Intellect"? 'title = "Spell Attack Modifier (based on profession)" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'} >+${Ancestry["Intellect"]}</td>
+                        <td ${SpellMod === "Will"? 'title = "Spell Attack Modifier (based on profession)" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'} >+${Ancestry["Will"]}</td>
+                        <td ${SpellMod === "Sociability"? 'title = "Spell Attack Modifier (based on profession)" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'} >+${Ancestry["Sociability"]}</td>                      
                     </table>
                     <div class="ancestry-skill-container">
                         <p class="ancestry-skill-label">Skills</p>
@@ -274,20 +281,6 @@ const show_list = (category) => {
                     <p class="ancestry-view-more" id="${AncestryName}-selected">${AncestryName === character["Ancestry"]? 'SELECTED' : ''}</p>
                 </div>
                 `
-            })
-            document.querySelectorAll(".ancestry-container").forEach( ancestryWrapper => {
-                ancestryWrapper.addEventListener("mousedown", () => {
-                    ancestryWrapper.style.transform = "translateY(0px)"
-                })
-                ancestryWrapper.addEventListener("mouseup", () => {
-                    ancestryWrapper.style.transform = "translateY(-10px)"
-                })
-                ancestryWrapper.addEventListener("mouseover", () => {
-                    ancestryWrapper.style.transform = "translateY(-10px)"
-                })
-                ancestryWrapper.addEventListener("mouseleave", () => {
-                    ancestryWrapper.style.transform = "translateY(0px)"
-                })
             })
         }
         
@@ -306,18 +299,18 @@ const show_list = (category) => {
                     <div class="profession-info-container">
                         <table border="1" class="profession-stat-table">
                         <tr class="ancestry-stat-label">
-                            <th ${SpellMod === "Strength"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-profession"' : 'class="ancestry-label"'}>STR</th>
-                            <th ${SpellMod === "Agility"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-profession"' : 'class="ancestry-label"'}>AGI</th>
-                            <th ${SpellMod === "Intellect"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-profession"' : 'class="ancestry-label"'}>INT</th>
-                            <th ${SpellMod === "Will"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-profession"' : 'class="ancestry-label"'}>WIL</th>
-                            <th ${SpellMod === "Sociability"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-profession"' : 'class="ancestry-label"'}>SCB</th>
+                            <th ${SpellMod === "Strength"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>STR</th>
+                            <th ${SpellMod === "Agility"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>AGI</th>
+                            <th ${SpellMod === "Intellect"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>INT</th>
+                            <th ${SpellMod === "Will"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>WIL</th>
+                            <th ${SpellMod === "Sociability"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>SCB</th>
                             <th class="ancestry-label">MP</th>
                         </tr>
-                        <td ${SpellMod === "Strength"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-profession"' : 'class="ancestry-stat"'}>${profession["Strength"] >= 0? "+" : ""}${profession["Strength"]}</td>  
-                        <td ${SpellMod === "Agility"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-profession"' : 'class="ancestry-stat"'}>${profession["Agility"] >= 0? "+" : ""}${profession["Agility"]}</td>
-                        <td ${SpellMod === "Intellect"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-profession"' : 'class="ancestry-stat"'}>${profession["Intellect"] >= 0? "+" : ""}${profession["Intellect"]}</td>
-                        <td ${SpellMod === "Will"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-profession"' : 'class="ancestry-stat"'}>${profession["Will"] >= 0? "+" : ""}${profession["Will"]}</td>
-                        <td ${SpellMod === "Sociability"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-profession"' : 'class="ancestry-stat"'}>${profession["Sociability"] >= 0? "+" : ""}${profession["Sociability"]}</td>   
+                        <td ${SpellMod === "Strength"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'}> ${profession["Strength"] >= 0? "+" : ""}${profession["Strength"]}</td>  
+                        <td ${SpellMod === "Agility"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'}> ${profession["Agility"] >= 0? "+" : ""}${profession["Agility"]}</td>
+                        <td ${SpellMod === "Intellect"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'}> ${profession["Intellect"] >= 0? "+" : ""}${profession["Intellect"]}</td>
+                        <td ${SpellMod === "Will"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'}> ${profession["Will"] >= 0? "+" : ""}${profession["Will"]}</td>
+                        <td ${SpellMod === "Sociability"? 'title = "Spell Attack Modifier" class="ancestry-stat spellmod-stat"' : 'class="ancestry-stat"'}> ${profession["Sociability"] >= 0? "+" : ""}${profession["Sociability"]}</td>   
                         <td class="ancestry-stat">${profession["MP"] >= 0? "+" : ""}${profession["MP"]}</td>                      
                         </table>
                         <div class="profession-skill-container">
@@ -328,22 +321,40 @@ const show_list = (category) => {
                     </div>
                 </div>
                 `
-                document.querySelectorAll(".profession-container").forEach( ancestryWrapper => {
-                    ancestryWrapper.addEventListener("mousedown", () => {
-                        ancestryWrapper.style.transform = "translateY(0px)"
-                    })
-                    ancestryWrapper.addEventListener("mouseup", () => {
-                        ancestryWrapper.style.transform = "translateY(-10px)"
-                    })
-                    ancestryWrapper.addEventListener("mouseover", () => {
-                        ancestryWrapper.style.transform = "translateY(-10px)"
-                    })
-                    ancestryWrapper.addEventListener("mouseleave", () => {
-                        ancestryWrapper.style.transform = "translateY(0px)"
-                    })
-                })
+                
             })
         }
+        
+        if (category === "Pledge") {
+            contentContainer.id = "pledge-wrapper"
+            pledge_data["Pledge"].forEach(pledge => {
+                const pledgeName = pledge["Pledge"]
+                const pledgeTitle = pledge["Pledge Title"]
+                contentContainer.innerHTML += `
+                <div class="pledge-container" onclick="javascript: change_stat('${pledgeName}','Pledge')"> 
+                    <p class="pledge-name">${pledgeName}</p>
+                    <p class="pledge-title">${pledgeTitle}</p>
+                    <img src="" alt="Picture of ${pledgeName}" class="pledge-img">
+                    <p class="pledge-selected" id="${pledgeName}-selected">${character["Pledge"] === pledgeName? "SELECTED": ""}</p>
+                </div>
+                `
+            })
+        }
+        document.querySelectorAll(`.${category.toLowerCase()}-container`).forEach(containerElement => {
+            containerElement.addEventListener("mousedown", () => {
+                containerElement.style.transform = "translateY(0px)"
+            })
+            containerElement.addEventListener("mouseup", () => {
+                containerElement.style.transform = "translateY(-10px)"
+            })
+            containerElement.addEventListener("mouseover", () => {
+                containerElement.style.transform = "translateY(-10px)"
+            })
+            containerElement.addEventListener("mouseleave", () => {
+                containerElement.style.transform = "translateY(0px)"
+            })
+            console.log("yay")
+    })
     }
 }
 
@@ -377,6 +388,7 @@ const update_character_stats = () => {
     document.getElementById("mental-condition").textContent = character["Mental Condition"]
     document.getElementById("SANITY").value = character.Proficiencies["SANITY"]
     document.getElementById("pledge-title").textContent = "Follower of " + find_stat("Pledge Title",character["Pledge"], "Pledge")
+    character["Spell Attack Modifier"] = pledge_data["Professions"].find(profession => profession["Professions"] === character["Profession"])["Spell Attack Modifier"]
 
     stats = ["Strength", "Agility", "Intellect", "Will", "Sociability", "MP"]
     stats.forEach(stat => {
@@ -420,6 +432,13 @@ const update_character_stats = () => {
         }        
 
         document.getElementById(stat).textContent = character[stat]
+        if (stat === character["Spell Attack Modifier"]) {
+            document.getElementById(stat).classList.add("spellmod-stat")
+            document.getElementById(stat).title = "Spell Attack Modifier (based on profession)"
+        } else {
+            document.getElementById(stat).classList.remove("spellmod-stat")
+            document.getElementById(stat).title = ""
+        }
     });
 
     // Skills Check and Saving Throws 
@@ -487,4 +506,4 @@ window.addEventListener('beforeunload', function (event) {
         event.preventDefault();
     }
     event.returnValue = '';
-});
+})
