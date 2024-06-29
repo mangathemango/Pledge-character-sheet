@@ -232,7 +232,7 @@ body {
     background-color: white;
     border: black 5px solid;
     position: absolute;
-    height: 80%;
+    height: 90%;
     width: 70%;
     justify-self: center;
     align-self: center;
@@ -265,7 +265,7 @@ body {
     box-shadow: 0px 10px 30px 2px black;
 }
 .ancestry-title {
-    font-size: 30px;
+    font-size: 35px;
     height: 10%;
 }
 
@@ -274,6 +274,9 @@ body {
     width: 90%;
     border: black solid 2px;
     text-align: center;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
 }
 
 .ancestry-stat-container {
@@ -332,6 +335,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    transition: all ease 0.3s;
 }
 
 .ancestry-view-more {
@@ -356,6 +360,7 @@ body {
     overflow: scroll;
     gap: 15px;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .profession-container {
@@ -387,7 +392,7 @@ body {
 }
 .profession-skill-container {
     display: flex;
-    height: 26%;
+    height: 34%;
     border: black solid 2px;
     margin-top: 5px;
     justify-content: center;
@@ -420,6 +425,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 5px;
 }
 
 .spellmod-stat {
@@ -445,12 +451,12 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 60%;
     gap: 20px;
-    border: black solid 3px;
     margin: 10px;
     overflow: scroll;
     height: 85%;
     overflow-x: hidden;
     justify-items: center;
+    width: 95%;
 }
 
 .pledge-img {

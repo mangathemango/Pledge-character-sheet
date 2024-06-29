@@ -17,6 +17,7 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
         pledge_data = data
     
         proficiency_types = []
+        
         pledge_data["Work proficiency"].forEach(proficiency => {
             const proficiencyName = proficiency["Proficiency"]
             const characterSanity = character.Proficiencies["SANITY"]
@@ -25,18 +26,18 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
                 updateSliderTrack(characterSanity,"SANITY")
                 return
             }
-            const professionProficiency = find_stat(proficiencyName,character["Profession"],"Proficiencies")
+            const professionProficiencyValue = find_stat(proficiencyName,character["Profession"],"Proficiencies")
 
             let characterProficiency = character.Proficiencies[proficiencyName]
             
             if (!characterProficiency) {
-                character.Proficiencies[proficiencyName] = professionProficiency || 0
+                character.Proficiencies[proficiencyName] = professionProficiencyValue || 0
             } else {
                 if (characterProficiency > 5) {
                     character.Proficiencies[proficiencyName] = 5
                 } 
-                if (characterProficiency < professionProficiency) {
-                    character.Proficiencies[proficiencyName] = professionProficiency
+                if (characterProficiency < professionProficiencyValue) {
+                    character.Proficiencies[proficiencyName] = professionProficiencyValue
                 }
             }
 
@@ -56,7 +57,7 @@ fetch("character.json").then(response => {return response.json()}).then(data => 
         })
     
         update_character_stats()
-        show_list("Pledge")
+        show_list("Mental Condition")
     })
 })
 
@@ -253,10 +254,11 @@ const show_list = (category) => {
             pledge_data["Ancestry"].forEach(Ancestry => {
                 AncestryName = Ancestry["Ancestry"]
                 AncestrySkills = Ancestry["Skill"].split("<br><br>").map(skill => skill.split(":")[0].replace("  ", ""))
+                AncestrySkillDescription = Ancestry["Skill"].split("<br><br>").map(skill => skill.split(":")[1].replace("  ", ""))
                 contentContainer.innerHTML += `
                 <div id=${AncestryName}-container class="ancestry-container" onclick='javascript:change_stat("${AncestryName}","Ancestry")'>
                     <p class="ancestry-title">${AncestryName}</p>
-                    <img src="" alt="Picture of ${AncestryName}" class="ancestry-img">
+                    <img src="assets/Ancestries/${AncestryName}.png" alt="Picture of ${AncestryName}" class="ancestry-img">
                     <table border="1" class="ancestry-stat-table">
                         <tr class="ancestry-stat-label">
                             <th ${SpellMod === "Strength"? 'title = "Spell Attack Modifier" class="ancestry-label spellmod-stat"' : 'class="ancestry-label"'}>STR</th>
@@ -274,8 +276,8 @@ const show_list = (category) => {
                     <div class="ancestry-skill-container">
                         <p class="ancestry-skill-label">Skills</p>
                         <div class="ancestry-skill-wrapper">
-                            <p class="ancestry-skill">${AncestrySkills[0]}</p>
-                            <p class="ancestry-skill">${AncestrySkills[1]}</p>
+                            <p class="ancestry-skill" title="${AncestrySkillDescription[0]}">${AncestrySkills[0]}</p>
+                            <p class="ancestry-skill" title="${AncestrySkillDescription[1]}">${AncestrySkills[1]}</p>
                         </div>
                     </div>
                     <p class="ancestry-view-more" id="${AncestryName}-selected">${AncestryName === character["Ancestry"]? 'SELECTED' : ''}</p>
@@ -321,7 +323,6 @@ const show_list = (category) => {
                     </div>
                 </div>
                 `
-                
             })
         }
         
@@ -339,6 +340,15 @@ const show_list = (category) => {
                 </div>
                 `
             })
+        }
+
+        if (category === "Mental Condition") {
+            contentContainer.id = "mental-condition-wrapper"
+            pledge_data["Mental"]
+        }
+
+        if (category === "Inventory") {
+            contentContainer.innerHTML = "im broke :("
         }
         document.querySelectorAll(`.${category.toLowerCase()}-container`).forEach(containerElement => {
             containerElement.addEventListener("mousedown", () => {
@@ -380,6 +390,41 @@ const close_list = () => {
     }, listEaseTime);
 }
 
+function countSyllables(word) {
+    word = word.toLowerCase();
+
+    const vowels = "aeiouy";
+
+    word = word.replace(/[^a-z]/g, "");
+
+    if (word.length === 0) return 0;
+    if (word.length === 1) return vowels.includes(word) ? 1 : 0;
+
+    if (word.endsWith('e')) {
+        word = word.slice(0, -1);
+    }
+
+    let syllableCount = 0;
+    let isPrevCharVowel = false;
+    console.log(word)
+    for (let i = 0; i < word.length; i++) {
+        if (vowels.includes(word[i])) {
+            if (!isPrevCharVowel) {
+                syllableCount++;
+                isPrevCharVowel = true;
+            }
+        } else {
+            isPrevCharVowel = false;
+        }
+    }
+
+    if (syllableCount === 0) {
+        syllableCount = 1;
+    }
+
+    return syllableCount;
+}
+
 const update_character_stats = () => {
     document.getElementById("character-name").value = character["Name"]
     document.getElementById("profession").textContent = character["Profession"]
@@ -394,7 +439,7 @@ const update_character_stats = () => {
     stats.forEach(stat => {
         proficiencyBoost = 0
         pledge_data["Work proficiency"].filter(element => element["Stat Boost"] === stat).forEach(proficiency => {
-            proficiencyBoost += parseInt(character.Proficiencies[proficiency["Proficiency"]])
+            proficiencyBoost += parseInt(character.Proficiencies[proficiency["Name"]])
         })
         
         bodyPartReducts = 0
