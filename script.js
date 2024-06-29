@@ -439,7 +439,7 @@ const update_character_stats = () => {
     stats.forEach(stat => {
         proficiencyBoost = 0
         pledge_data["Work proficiency"].filter(element => element["Stat Boost"] === stat).forEach(proficiency => {
-            proficiencyBoost += parseInt(character.Proficiencies[proficiency["Name"]])
+            proficiencyBoost += parseInt(character.Proficiencies[proficiency["Proficiency"]])
         })
         
         bodyPartReducts = 0
