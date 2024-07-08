@@ -70,6 +70,7 @@ const create_category_element = (categoryName) => {
     categoryContainer.setAttribute("onclick",`javascript: show_category_list("${categoryName}")`)
 
     categoryContainer.innerHTML = `<p class="category-label">${categoryName}</p>`
+    console.log(categoryContainer)
     return categoryContainer
 }
 
@@ -423,6 +424,21 @@ function countSyllables(word) {
     }
 
     return syllableCount;
+}
+
+const random_character = () => {
+    const get_random = (Array) => {
+        return Array[Math.floor(Math.random()*Array.length)]
+    }
+    const Ancestries = ["Human", "Ork", "Dwarf","Fairy","Goblin"]
+    const Professions = pledge_data["Professions"].map(object => object["Professions"])
+    const Pledge = pledge_data["Pledge"].map(object => object["Pledge"])
+
+    return {
+        "Profession": get_random(Professions),
+        "Ancestry": get_random(Ancestries),
+        "Pledge": get_random(Pledge),
+    }
 }
 
 const update_character_stats = () => {
