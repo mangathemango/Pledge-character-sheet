@@ -836,11 +836,7 @@
             "Stat Reducts": "Intellect Sociability"
         },
         {
-            "Body Part": "Left Arm",
-            "Stat Reducts": "Strength"
-        },
-        {
-            "Body Part": "Right Arm",
+            "Body Part": "Arms",
             "Stat Reducts": "Strength"
         },
         {
@@ -848,15 +844,7 @@
             "Stat Reducts": "Will"
         },
         {
-            "Body Part": "Torso",
-            "Stat Reducts": "Will"
-        },
-        {
-            "Body Part": "Left Leg",
-            "Stat Reducts": "Agility"
-        },
-        {
-            "Body Part": "Right Leg",
+            "Body Part": "Legs",
             "Stat Reducts": "Agility"
         }
     ],
@@ -1298,11 +1286,11 @@
         },
         {
             "Mental Condition": "Insane",
-            "Strength": -999,
-            "Agility": -999,
-            "Intellect": -999,
-            "Will": -999,
-            "Sociability": -999
+            "Strength": -20,
+            "Agility": -20,
+            "Intellect": -20,
+            "Will": -20,
+            "Sociability": -20
         }
     ],
     "Pledge": [

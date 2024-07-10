@@ -85,7 +85,7 @@ body {
 }
 
 #physical-condition-container {
-    height: 80%;
+    height: calc(80%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -891,7 +891,6 @@ body {
 
 #SANITY-container {
     background-color: lightblue;
-    box-shadow: 0px 0px 30px 1px lightblue;
     align-self: center;
 }
 
@@ -907,6 +906,7 @@ body {
     height: 40px;
     display: flex;
     margin: 0px;
+    margin-bottom: 5px;
 }
 
 #big-prof-container {

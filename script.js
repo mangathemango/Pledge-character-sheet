@@ -469,6 +469,12 @@ const update_character_stats = () => {
             }
             bodyPartReducts += (5 - bodyPartValue)
         })
+
+        if (character["Proficiencies"]["SANITY"] <= 0) {
+            character["Mental Condition"] = "Insane"
+        } else {
+            character["Mental Condition"] = "Neutral"
+        }
         if (stat === "MP") {
             spellAttackModifier = 0 
             if (find_stat("Spell Attack Modifier",character["Profession"],"Professions") != "None") {
@@ -481,11 +487,12 @@ const update_character_stats = () => {
             proficiencyBoost +
             character["Will"]/2
             )
+
         } else {
             // Normal Stat =  SANITY / 2 + Work prof points / 2 + Ancestry + Physical + Mental + Profession  
             character[stat] = 
             (character.Proficiencies["SANITY"] - 5) +
-            (proficiencyBoost/2) +
+            (proficiencyBoost) +
             find_stat(stat,character["Ancestry"],"Ancestry") + 
             find_stat(stat,character["Mental Condition"],"Mental Condition") + 
             find_stat(stat,character["Profession"],"Professions") -

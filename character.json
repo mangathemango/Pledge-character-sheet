@@ -5,12 +5,9 @@
     "Pledge": "Pledgeless",
     "Physical Condition": {
         "Head": 5,
-        "Left Arm": 5,
-        "Right Arm": 5,
+        "Arms": 5,
         "Chest": 5,
-        "Torso": 5,
-        "Left Leg": 5,
-        "Right Leg": 5
+        "Legs": 5
     },
     "Mental Condition": "Neutral",
     "Gold Pieces": 0,
